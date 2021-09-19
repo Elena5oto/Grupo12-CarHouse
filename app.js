@@ -8,7 +8,7 @@ app.use(express.static(publicPath));
 
 app.listen(process.env.PORT || 3030,()=>console.log("servidor en linea http://localhost:3030"));
 
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "/views/home.html"))
 });
 
@@ -18,4 +18,8 @@ app.get('/carrito.html', (req, res) => {
 
 app.get('/login.html', (req, res) => {
     res.sendFile(path.join(__dirname, "/views/Login.html"))
+});
+
+app.get('/register.html', (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/register.html"))
 });
