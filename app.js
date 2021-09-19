@@ -1,20 +1,21 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-app.use(express.static('public'));
-const PORT = process.env.PORT || 3000;
+let express = require("express");
+let app = express();
+let path = require("path");
+let publicPath = path.join(__dirname,"./public");
+/*const port = 3030;*/
 
-app.get('/', (req,res) => {
-    res.sendFile(path.resolve('./views/home.html'));
+app.use(express.static(publicPath));
+
+app.listen(process.env.PORT || 3030,()=>console.log("servidor en linea http://localhost:3030"));
+
+app.post('/', (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/home.html"))
 });
 
-app.get('/login', (req,res) => {
-    res.sendFile(path.resolve('./views/login.html'));
+app.get('/carrito.html', (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/carrito.html"))
 });
 
-app.get('/register', (req,res) => {
-    res.sendFile(path.resolve('./views/register.html'));
+app.get('/login.html', (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/Login.html"))
 });
-
-
-app.listen(PORT, () => console.log ('servidor en puerto 3000'));

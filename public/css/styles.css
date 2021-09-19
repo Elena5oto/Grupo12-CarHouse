@@ -1,0 +1,38 @@
+*{
+    border:1px solid grey;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-erf{
+    display: flex;
+   justify-content: center;
+   width: 100%;
+   text-align: center; 
+   background-position: center;
+   background-color: rgb(211, 211, 214);
+}
+
+.barra-sup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(131, 125, 125);
+    color: white;
+}
+
+.servicio{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.desc-servicio{
+    size: 25px;
+}
