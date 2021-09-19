@@ -13,6 +13,9 @@ Integrantes:
 * Gerardo Burgos: Hola mi nombre es gerard, tengo 34 años. Soy economista y trabajo en el área de compras. Me gusta mucho la tecnología y quiero reperfilar mi carrera. Con muchas ganas de seguir aprendiendo.
 * Elena Soto: Docente, mamá de Rafa y Mayte, vivo en Río Cuarto. Me encanta el mate.
 * Mitzio Roldan: Estudiante autodidacta, apasionado de la tecnología y la movilidad eléctrica.
+*
+Link de Trello organizador del trabajo:
+https://trello.com/b/fV7UWc9M/proyecto-e-commerce-dh
 
 Sitios web de referencia:
 https://www.lucaslermen.com.br/ (Apariencia en el home)
