@@ -1,7 +1,7 @@
 {
   "name": "fotografia",
   "version": "1.0.0",
-  "description": "",
+  "description": "![logowhite](https://user-images.githubusercontent.com/77336492/131771171-c498be79-fa6c-4434-8063-90208bcec93e.png)\r ## **Nos encargamos de inmortalizar tus momentos en fotografías 📸**\r * Bodas👰\r * 15 Años👸\r * Sesiones🤵",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elena5oto/Grupo_12_EduardoRoldanFotografia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Elena5oto/Grupo_12_EduardoRoldanFotografia/issues"
+  },
+  "homepage": "https://github.com/Elena5oto/Grupo_12_EduardoRoldanFotografia#readme"
 }
