@@ -4,24 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/styles.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
           rel="stylesheet" />
     <title>Document</title>
 </head>
 <body>
     <header>
-        <img class="logo-erf" src="/images/Logo_black.png">
-        <div class="registro">Iniciar sesión</div>
+        <div class="logo-box"><img class="logo-erf" src="/images/Logo_black.png"></div>
+        <nav>
+            <div class="barra-sup">
+                <p>|| <a href="#">Inicio</a></p>
+                <p>|| <a href="#">Trabajos</a></p>
+                <p>|| <a href="#">Paquetes</a></p>
+                <p>|| <a href="#">Iniciar Sesión</a> || <a href="#">Registrarse</a> ||</p>
+            </div>
+        </nav>
     </header>
+    <br>
     <main>
         <article class="servicio">    
-            <div class="desc-servicio">nombre del servicio</div>
-            <div class="foto">imagen</div>
-            <div class="fecha.evento">
-                <input type="date" name="fecha" value="2021-07-22">
+           <div class="servicio-uno">    
+                <div class="desc-servicio">Servicio de BODA</div>
+                <div class="foto"><img class="foto-casamiento" src="/images/4fd1671568b079167feae68ffac99dcf.jpg"></div>
+           </div>
+           <div class="servicio-dos"> 
+                <div class="fecha.evento">
+                    <input type="date" name="fecha" value="2021-07-22">
+                </div>
+                <div class="valor-evento">valor</div>
+                <div class="contratar">Contratar</div>
             </div>
-            <div class="valor-evento">valor</div>
-            <div class="contratar">Contratar</div>
         </article>
     </main>
     <footer>
