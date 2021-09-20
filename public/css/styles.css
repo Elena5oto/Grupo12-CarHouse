@@ -329,7 +329,16 @@
     border-radius: 5px;
     margin: 5% 15% 5% 15%;
 
+    
+
 }
+.body-login{
+    background-image: url(../images/fondoregister.jpg) ;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+
 .control-form{
     margin-bottom: 20px;
 }
