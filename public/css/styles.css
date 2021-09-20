@@ -187,3 +187,34 @@
 .trabajos_preview img{
     width: 100%;
 }
+
+/* register; */ 
+
+.login-form {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid black;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    margin: 5% 15% 5% 15%;
+    display: flex;
+    flex-direction: column;
+  }
+  .control-form {
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .control-form label {
+    display: flex;
+  }
+  .control-form input {
+    display: flex;
+    width: 100%;
+  }
+
+  .boton-enviar {
+    background-color: #1259c3;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+  }
