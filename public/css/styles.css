@@ -312,6 +312,13 @@
     color: white;
     border-radius: 5px;
   }
+
+  .bodyregister{
+    background-image: url(../images/fondoregister.jpg) ;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
 /* login; */ 
 
 .login-form {
