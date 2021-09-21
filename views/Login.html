@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-          rel="stylesheet" />
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/styles.css" rel="stylesheet" />
+        <title>login</title>
+    </head>
+<body class="body-login">
+
     <header>
-        <img class="logo-erf" src="/images/Logo_black.png">
-        <div class="registro">Iniciar sesión</div>
+        <div class="logo-box"><img class="logo-erf" src="/images/Logo_black.png"></div>
+        <nav>
+            <div class="barra-sup">
+                <p>|| <a href="#">Inicio</a></p>
+                <p>|| <a href="#">Trabajos</a></p>
+                <p>|| <a href="#">Paquetes</a></p>
+                <p>|| <a href="#">Iniciar Sesión</a> || <a href="#">Registrarse</a> ||</p>
+            </div>
+        </nav>
     </header>
     <main>
-        <form action="/" method= "GET" class="logim-form">
-    <label for="usuario">Nombre de usuario</label>
-    <imput type= "text" name= "usuario">
-        <label  form= "password"> Ingrese su Contraseña</label>
-        <imput type = "password" name ="password">
-        <button type="submit" value="Enviar"> Enviar</button>  
-        </form>      
-    </main>
+        <form action="/" method="GET" class="login-form">
+             <div class="control-form">
+                 <label for="usuario">Nombre de usuario</label>
+                 <input type="text" name="usuario">
+             </div>
+             <div class="control-form">
+                 <label for="password">Ingrese su contraseña</label>
+                 <input type="password" name="password">
+             </div>
+             <button type="submit" value="Enviar" class="boton-enviar">Enviar</button>
+        </form>
+     </main>
+
     <footer>
         <div class="datos-contacto">
             <P class="tel">Telefono: +54......</P>

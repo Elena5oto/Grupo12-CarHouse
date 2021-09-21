@@ -23,3 +23,4 @@ app.get('/login.html', (req, res) => {
 app.get('/register.html', (req, res) => {
     res.sendFile(path.join(__dirname, "/views/register.html"))
 });
+

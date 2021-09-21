@@ -9,38 +9,68 @@
           rel="stylesheet" />
     <title>Document</title>
 </head>
-<body>
+<body class="body-carrito">
     <header>
         <div class="logo-box"><img class="logo-erf" src="/images/Logo_black.png"></div>
         <nav>
             <div class="barra-sup">
-                <p>|| <a href="#">Inicio</a></p>
-                <p>|| <a href="#">Trabajos</a></p>
-                <p>|| <a href="#">Paquetes</a></p>
-                <p>|| <a href="#">Iniciar Sesión</a> || <a href="#">Registrarse</a> ||</p>
+                <p>|| <a class="enlace-menu" href="/">Inicio</a></p>
+                <p>|| <a class="enlace-menu" href="#">Trabajos</a></p>
+                <p>|| <a class="enlace-menu" href="#">Paquetes</a></p>
+                <p>|| <a class="enlace-menu" href="./Login.html">Iniciar Sesión</a></p>  
+                <p>|| <a class="enlace-menu" href="./register.html">Registrarse</a></p>
             </div>
         </nav>
     </header>
     <br>
-    <main>
-        <article class="servicio">    
-           <div class="servicio-uno">    
-                <div class="desc-servicio">Servicio de BODA</div>
-                <div class="foto"><img class="foto-casamiento" src="/images/4fd1671568b079167feae68ffac99dcf.jpg"></div>
-           </div>
-           <div class="servicio-dos"> 
-                <div class="fecha.evento">
-                    <input type="date" name="fecha" value="2021-07-22">
-                </div>
-                <div class="valor-evento">valor</div>
-                <div class="contratar">Contratar</div>
-            </div>
-        </article>
+    <main class="servicios-general">
+        <article class="module-service">    
+            <div class="descripcion-servicio">Casamiento</div>
+            <div class="servicio">     
+                 <div><img class="foto" src="/images/4fd1671568b079167feae68ffac99dcf.jpg"></div>     
+                 <div class="servicio-dos"> 
+                     <div class="fecha.evento">
+                         <input type="date" name="fecha" value="2021-07-22">
+                     </div>
+                     <div class="valor-evento">$10000</div>
+                     <button class="contratar" type="submit" value="Contratar"> Contratar</button>
+                     </div>
+             </div>
+         </article>
+         <article class="module-service">    
+            <div class="descripcion-servicio">Fiesta de 15</div>
+            <div class="servicio">     
+                 <div><img class="foto" src="/images/tematicas-para-fiestas-de-15-anos-4.jpg"></div>
+                 <div class="servicio-dos"> 
+                     <div class="fecha.evento">
+                         <input type="date" name="fecha" value="2021-07-22">
+                     </div>
+                     <div class="valor-evento">$15000</div>
+                     <button class="contratar" type="submit" value="Contratar"> Contratar</button>
+                     </div>
+             </div>
+         </article>
+         <article class="module-service">    
+            <div class="descripcion-servicio">Empresarial</div>
+            <div class="servicio">     
+                 <div><img class="foto" src="/images/empresa.jpg"></div>
+                 <div class="servicio-dos"> 
+                     <div class="fecha.evento">
+                         <input type="date" name="fecha" value="2021-07-22">
+                     </div>
+                     <div class="valor-evento">$7000</div>
+                     <button class="contratar" type="submit" value="Contratar"> Contratar</button>
+                     </div>
+             </div>
+         </article>
+         
+       
     </main>
-    <footer>
-        <div class="datos-contacto">
+    <footer class="footer-carrito">
+        <div class="datos-contacto-carrito">
             <P class="tel">Telefono: +54......</P>
-            <p class="redes-soc">Redes Sociales: <i class="fab fa-facebook-square"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter-square"></i></p>
+            <p><a class="enlace-menu" href="#">Contacto</a></p>
+            <p class="redes-soc"><i class="fab fa-facebook-square"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter-square"></i></p>
         </div>
     </footer>
 </body>
