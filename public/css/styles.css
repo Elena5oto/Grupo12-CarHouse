@@ -210,14 +210,25 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 60vh;
+    height: 300px;
+}
+
+.slider .title_slider{
+    position: absolute;
+    z-index: 1;
+    /* bottom: 50%; */
+    font-size: 2.5em;
+    font-weight: bold;
+    top: 50%;
+    color: white;
+    text-shadow: 0px 1px 20px rgb(100 100 100);
 }
 .slider .slide{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60vh;
+    height: 300px;
     visibility: hidden;
     
     clip-path: circle(0.4% at 3% 50%);
@@ -241,9 +252,41 @@
 }
 
 .slider .slide img{
-    width: 100%;
-    height: 60vh;
+    width: 100%; 
+    height: 300px;
     object-fit: cover;
+}
+.servicio_box{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    align-content: center;
+}
+.servicio_box h2{
+    text-align: center;
+    margin:10px;
+    width: 100%;
+}
+.list_services{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.servicio_box h3{
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 200;
+    margin: 10px;
+    text-align: center;
+}
+.btn_services{
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 @keyframes slider{
     0%{
