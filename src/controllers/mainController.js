@@ -8,6 +8,9 @@ const controller = {
     },
 
     //Carlos
+    carrito: (req, res) =>{
+        res.render('carrito')
+    },
 
     //Gerardo
 

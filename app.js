@@ -9,3 +9,4 @@ app.listen(process.env.PORT || 3030,()=>console.log("servidor en linea http://lo
 
 app.use('/', mainroutes);
 app.use('/producto', mainroutes)
+app.use('/carrito', mainroutes)

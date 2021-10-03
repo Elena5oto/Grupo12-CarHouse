@@ -1,36 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/styles.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-          rel="stylesheet" />
-    <title>Document</title>
-</head>
+<%- include("./partials/head.ejs") %>
+
 <body class="body-carrito">
-    <header class="main-header">
-        <div class="nav_header">
-            <figure>
-                <img class="page_logo" src="/images/Logo_black.png" alt="Page logo">
-            </figure>
-        <div class="burger_menu">
-            <div class="burger_btn"></div>
-        </div>
-        <nav class="navigation_bar">
-            <a href="">Home</a>
-            <a href="">Trabajos</a>
-            <a href="">Servicios</a>
-            <a href="">Sobre Mí</a>
-            <a href="">Contacto</a>
-            <a href="">Cuenta</a>
-            <a href=/login>Ingresá</a>
-            </nav>
-        </div>
-    </header>
+    <%- include("./partials/header.ejs") %>
+    
     <br>
     <main class="servicios-general">
+        
         <article class="module-service">    
             <div class="descripcion-servicio">Casamiento</div>
             <div class="servicio">     
@@ -73,12 +50,6 @@
          
        
     </main>
-    <footer class="footer-carrito">
-        <div class="datos-contacto-carrito">
-            <P class="tel">Telefono: +54......</P>
-            <p><a class="enlace-menu" href="#">Contacto</a></p>
-            <p class="redes-soc"><i class="fab fa-facebook-square"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter-square"></i></p>
-        </div>
-    </footer>
+    <%- include("./partials/footer.ejs") %>
 </body>
 </html>
