@@ -9,25 +9,9 @@
     <link href="/css/styles.css" rel="stylesheet" />
     <title>Register</title>
 </head>
-<header class="main-header">
-    <div class="nav_header">
-        <figure>
-            <img class="page_logo" src="/images/Logo_black.png" alt="Page logo">
-        </figure>
-    <div class="burger_menu">
-        <div class="burger_btn"></div>
-    </div>
-    <nav class="navigation_bar">
-        <a href="">Home</a>
-        <a href="">Trabajos</a>
-        <a href="">Servicios</a>
-        <a href="">Sobre Mí</a>
-        <a href="">Contacto</a>
-        <a href="">Cuenta</a>
-        <a href=/login>Ingresá</a>
-        </nav>
-    </div>
-</header>
+
+    <%- include('./partials/header') %>
+
 <body class="bodyregister">
     <main>
         <div class="cajaregister">
@@ -52,12 +36,7 @@
         </form>
         </div>
      </main>
-     <footer class="footer-carrito">
-        <div class="datos-contacto-carrito">
-            <P class="tel">Telefono: +54......</P>
-            <p><a class="enlace-menu" href="#">Contacto</a></p>
-            <p class="redes-soc"><i class="fab fa-facebook-square"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter-square"></i></p>
-        </div>
-    </footer>
+     <%- include('./partials/footer') %>
+
 </body>
 </html>
