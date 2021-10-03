@@ -1,31 +1,11 @@
 let express = require("express");
 let app = express();
-let path = require("path");
-let publicPath = path.join(__dirname,"./public");
+const mainroutes = require('./src/routes/mainRoutes.js');
 /*const port = 3030;*/
-
-app.use(express.static(publicPath));
+app.set('view engine', 'ejs');
+app.use(express.static('./public'));
 
 app.listen(process.env.PORT || 3030,()=>console.log("servidor en linea http://localhost:3030"));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/home.html"))
-});
-
-app.get('/carrito.html', (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/carrito.html"))
-});
-
-app.get('/login.html', (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/Login.html"))
-});
-
-app.get('/register.html', (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/register.html"))
-});
-
-app.get('/producto', (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/productDetail.html"))
-});
-
-//nada//
+app.use('/', mainroutes);
+app.use('/producto', mainroutes)
