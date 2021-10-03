@@ -10,7 +10,10 @@ const controller = {
     //Carlos
 
     //Gerardo
-
+    register: (req, res) => {
+        res.render('register')
+    },
+    
     //Elena   
 
 }
