@@ -15,4 +15,6 @@ app.use('/carrito', mainroutes)
 
 app.use('/register', mainroutes)
 
+app.use('/login', mainroutes)
+
 

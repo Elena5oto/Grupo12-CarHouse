@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %> 
+    
+    
+<body class="body-login">
+    <%- include('./partials/header.ejs') %>
+
+    
+    <main>
+        <form action="/" method="GET" class="login-form">
+             <div class="control-form">
+                 <label for="usuario">Nombre de usuario</label>
+                 <input type="text" name="usuario">
+             </div>
+             <div class="control-form">
+                 <label for="password">Ingrese su contraseña</label>
+                 <input type="password" name="password">
+             </div>
+             <button type="submit" value="Enviar" class="boton-enviar">Enviar</button>
+        </form>
+     </main>
+
+      <%- include('./partials/footer') %>
+    </footer>
+</body>
+</html>
+

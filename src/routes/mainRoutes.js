@@ -12,4 +12,7 @@ router.get('/carrito', controllers.carrito);
 router.get('/register', controllers.register);
 
 
+router.get('/login' , controllers.login);
+
+
 module.exports = router;
