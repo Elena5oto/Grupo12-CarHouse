@@ -318,9 +318,10 @@
 /* Lista de productos */
 .contetlistpro{
     /*   */
-    height: 90vh;
+    min-height: 80vh;
     display: flex;
     flex-wrap: nowrap;
+    margin-top: 20px;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -336,19 +337,26 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 100%;
     
+}
+.listconteiner h2{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .conteinerlistcolumn{
     display: flex;
-    margin: 50px;
+    /* margin: 50px; */
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 .cardoflist{
     display: flex;
     flex-direction: column;
-    position: relative;
+    
     margin: 30px;
     height: 400px;
     width: 300px;
@@ -361,7 +369,7 @@
     transform: perspective(1000px);
 }
 .cardoflist .imgoflistcard{
-    position: absolute;
+    
     z-index: 10;
     display: flex;
     justify-content: center;
