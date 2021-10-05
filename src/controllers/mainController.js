@@ -6,6 +6,9 @@ const controller = {
     product: (req, res) =>{
         res.render('productDetail')
     },
+    list_of_products: (req, res)=>{
+        res.render('list_of_products')
+    },
 
     //Carlos
     carrito: (req, res) =>{
