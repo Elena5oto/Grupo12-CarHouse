@@ -12,8 +12,9 @@ app.use('/producto', mainroutes)
 
 app.use('/carrito', mainroutes)
 
+app.use('/register', mainroutes);
 
-app.use('/register', mainroutes)
+app.use('/CargaEdicionProducto', mainroutes);
 
 app.use('/login', mainroutes)
 

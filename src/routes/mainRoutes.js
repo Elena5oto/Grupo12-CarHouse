@@ -11,6 +11,8 @@ router.get('/carrito', controllers.carrito);
 
 router.get('/register', controllers.register);
 
+router.get('/CargaEdicionProducto', controllers.CargaEdicionProducto);
+
 
 router.get('/login' , controllers.login);
 

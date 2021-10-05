@@ -449,3 +449,13 @@
     bottom: 0;
     width: 100%;
 }
+
+.bodycargaymodificacion{
+    background-image: url(../images/fotoformcarga.jpg) ;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.cajacargaedicion {
+    width: 50%;
+}

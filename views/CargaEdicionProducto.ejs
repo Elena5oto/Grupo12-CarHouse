@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <title>Carga de Productos</title>
+</head>
+
+    <%- include('./partials/header') %>
+
+<body class="bodycargaymodificacion">
+    <main>
+        <div class="cajacargaedicion">
+        <form action="/" method="GET" class="login-form">
+             <div class="control-form">
+                 <label for="usuario">Nombre del Producto</label>
+                 <input type="text" name="usuario">
+             </div>
+             <div class="control-form">
+                <label for="usuario">Equipo utilizado</label>
+                <input type="text" name="usuario">
+            </div>
+            <div class="control-form">
+                <label for="horas">Cantidad de horas </label>
+                <input type="text" name="horas">
+            </div>
+            <div>
+            <label>Selecciona el tipo de evento </label>
+            <select value=mes name="mes">
+              <option value="1"> Cumpleaños de 15 </option>
+              <option value="2"> Bautismo </option>
+              <option value="3"> Casamiento </option>
+              <option value="4"> Nacimiento </option>
+              <option value="5"> Empresarial </option>
+              <option value="6"> Fiesta de fin de año </option>
+              <option value="7"> Book personal </option>
+              <option value="8"> Profesional </option>
+
+            </select>
+            </div>
+
+            <div class="control-form">
+                <label for="categorias">El servicio incluye </label>
+
+                <input type= "checkbox" id= "sesion de fotografia" name="sesion de fotografia" value= "sesion de fotografia">
+                <label for="electro">Sesion de fotografia</label><br>
+
+                <input type= "checkbox" id= "video clip" name="video clip" value= "video clip">
+                <label for="video clip">Video Clip</label><br>
+
+                <input type= "checkbox" id= "historia de vida" name="historia de vida" value= "historia de vida">
+                <label for="historia de vida">Historia de vida</label><br>
+
+                <input type= "checkbox" id= "fotografia durante el evento" name="fotografia durante el evento" value= "fotografia durante el evento">
+                <label for="fotografia durante el evento">Fotografia durante el evento</label><br>
+
+                <input type= "checkbox" id= "filmacion" name="filmacion" value= "filmacion">
+                <label for="filmacion">Filmación</label><br>
+
+
+            </div>
+
+
+            <div class="control-form">
+                <label for="usuario">Foto del producto</label>
+                <input type="file" name="foto" accept=".jpg">
+            </div>
+             <button type="submit" value="Enviar" class="boton-enviar">Cargar producto</button>
+        </form>
+        </div>
+     </main>
+     <%- include('./partials/footer') %>
+
+</body>
+</html>

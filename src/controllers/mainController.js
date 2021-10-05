@@ -17,6 +17,10 @@ const controller = {
         res.render('register')
     },
     
+    CargaEdicionProducto: (req, res) => {
+        res.render('CargaEdicionProducto')
+    },
+    
     //Elena   
     login:( req, res)=> {
         res.render('login')
