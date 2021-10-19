@@ -55,6 +55,17 @@
     </div>
     
     <script type="text/javascript" src="/js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="/js/scroll-out.min.js"></script>
+    <script type="text/javascript">
+    let vw = window.innerWidth;
+    vw < 1200 ? 
+    ScrollOut({
+        targets: ".cardoflist",
+        threshold: 0.8
+        
+      })
+      : '';
+    </script>
 
 </script>
 </body>
