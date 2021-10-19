@@ -12,7 +12,8 @@
         "Filmacion durante el evento",
         "Acceso a tus fotos desde la nube"
     ],
-    "precio": 60000
+    "precio": 60000,
+    "imagen": ""
 },
 {
     "id": 2,
@@ -26,7 +27,8 @@
         "Filmacion durante el evento",
         "Acceso a tus fotos desde la nube"
     ],
-    "precio": 50000
+    "precio": 50000,
+    "imagen": ""
 },
 {
     "id": 3,
@@ -39,7 +41,8 @@
         "Video Clip de la sesion fotografica",
         "Acceso a tus fotos desde la nube"
     ],
-    "precio": 15000
+    "precio": 15000,
+    "imagen": ""
 },
 {
     "id": 4,
@@ -55,6 +58,7 @@
         "Filmacion durante el evento",
         "Acceso a tus fotos desde la nube"
     ],
-    "precio": 100000
+    "precio": 100000,
+    "imagen": ""
 }
 ]
