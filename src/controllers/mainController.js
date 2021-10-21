@@ -70,7 +70,7 @@ const controller = {
 		})
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.redirect('/paquetes/producto/productsEdit/1');
+		res.redirect('/paquetes');
 	},
 
     //Gerardo
