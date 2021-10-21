@@ -24,16 +24,7 @@ const controller = {
     carrito: (req, res) =>{
         res.render('carrito')
     },
-
-    //Gerardo
-    register: (req, res) => {
-        res.render('register')
-    },
     
-    CargaEdicionProducto: (req, res) => {
-        res.render('productsload')
-    },
-
     cargarProducto: (req, res) => {
         const {name, title, description, price, image}= req.body;
         let ids= products.map(p=>p.id)
@@ -49,6 +40,17 @@ const controller = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
         res.redirect('/paquetes');
     },
+
+    //Gerardo
+    register: (req, res) => {
+        res.render('register')
+    },
+    
+    CargaEdicionProducto: (req, res) => {
+        res.render('productsload')
+    },
+
+    
     
     //Elena   
     login:( req, res)=> {
