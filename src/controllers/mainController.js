@@ -24,8 +24,9 @@ const controller = {
     carrito: (req, res) =>{
         res.render('carrito')
     },
-    
+
     cargarProducto: (req, res) => {
+        
         const {name, title, description, price, image}= req.body;
         let ids= products.map(p=>p.id)
         let newProduct= {
@@ -41,13 +42,46 @@ const controller = {
         res.redirect('/paquetes');
     },
 
+    productsEdit: (req, res) => {
+        
+        let productToEdit = products.find(product=>product.id==req.params.id)
+		res.render('productsEdit',{productToEdit,toThousand})
+       
+
+    },
+
+    update: (req, res) => {
+        
+        let ids= req.params.id;
+        let productToEdit = products.find(product => product.id == ids)
+        
+        productToEdit = {
+			id: productToEdit.id,
+			...req.body,
+			
+		};
+        console.log(ids)
+		
+		let newProducts = products.map(product => {
+			if (product.id == productToEdit.id) {
+				return product = {...productToEdit};
+			}
+			return product;
+		})
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+		res.redirect('/paquetes/producto/productsEdit/1');
+	},
+
     //Gerardo
     register: (req, res) => {
         res.render('register')
     },
+
+
     
     CargaEdicionProducto: (req, res) => {
-        res.render('productsload')
+        res.render('productsLoad')
     },
 
     

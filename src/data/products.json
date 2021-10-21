@@ -1,34 +1,19 @@
 [
  {
   "id": 1,
-  "name": "Bodas",
+  "name": "Bodas 12",
   "title": "Boda",
-  "description": [
-   "Sesión fotográfica pre Boda",
-   "Video Clip de la sesion fotografica",
-   "Historia de Vida de la pareja",
-   "Fotografia durante el evento",
-   "Fotografia en estudio Fotografico",
-   "Filmacion durante el evento",
-   "Acceso a tus fotos desde la nube"
-  ],
-  "precio": 60000,
-  "imagen": ""
+  "description": "Sesión fotográfica pre Boda,Video Clip de la sesion fotografica,Historia de Vida de la pareja,Fotografia durante el evento,Fotografia en estudio Fotografico,Filmacion durante el evento,Acceso a tus fotos desde la nube 12",
+  "price": "6000012",
+  "image": "asd12"
  },
  {
   "id": 2,
-  "name": "15 Años",
-  "title": "Fista de 15 años",
-  "description": [
-   "Sesión fotográfica pre 15 años",
-   "Video Clip de la sesion fotografica",
-   "Historia de Vida",
-   "Fotografia durante el evento",
-   "Filmacion durante el evento",
-   "Acceso a tus fotos desde la nube"
-  ],
-  "precio": 50000,
-  "imagen": ""
+  "name": "asdasd",
+  "title": "asdasd",
+  "description": "asdasd",
+  "price": "asdas",
+  "image": "asdasdasda"
  },
  {
   "id": 3,
@@ -41,8 +26,8 @@
    "Video Clip de la sesion fotografica",
    "Acceso a tus fotos desde la nube"
   ],
-  "precio": 15000,
-  "imagen": ""
+  "price": 15000,
+  "image": "asd"
  },
  {
   "id": 4,
@@ -58,8 +43,7 @@
    "Filmacion durante el evento",
    "Acceso a tus fotos desde la nube"
   ],
-  "precio": 100000,
-  "imagen": ""
+  "price": 100000,
+  "image": "asd"
  }
- 
 ]

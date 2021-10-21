@@ -24,12 +24,15 @@ router.get('/carrito', controllers.carrito);
 
 router.get('/register', controllers.register);
 
-router.get('/productsload', controllers.CargaEdicionProducto);
+router.get('/paquetes/productsLoad', controllers.CargaEdicionProducto);
 
-router.post('/productsload', controllers.cargarProducto);
+router.post('/paquetes/productsLoad', controllers.cargarProducto);
 
 
 router.get('/login' , controllers.login);
+
+router.get('/paquetes/producto/productsEdit/:id', controllers.productsEdit);
+router.put('/:id', controllers.update); 
 
 
 

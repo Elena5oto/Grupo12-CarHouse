@@ -1,0 +1,65 @@
+[
+    {
+     "id": 1,
+     "name": "Bodas",
+     "title": "Boda",
+     "description": [
+      "Sesión fotográfica pre Boda",
+      "Video Clip de la sesion fotografica",
+      "Historia de Vida de la pareja",
+      "Fotografia durante el evento",
+      "Fotografia en estudio Fotografico",
+      "Filmacion durante el evento",
+      "Acceso a tus fotos desde la nube"
+     ],
+     "price": 60000,
+     "image": "asd"
+    },
+    {
+     "id": 2,
+     "name": "15 Años",
+     "title": "Fista de 15 años",
+     "description": [
+      "Sesión fotográfica pre 15 años",
+      "Video Clip de la sesion fotografica",
+      "Historia de Vida",
+      "Fotografia durante el evento",
+      "Filmacion durante el evento",
+      "Acceso a tus fotos desde la nube"
+     ],
+     "price": 50000,
+     "image": "asd"
+    },
+    {
+     "id": 3,
+     "name": "Sesiones",
+     "title": "Sesión fotográfica",
+     "description": [
+      "Sesión fotográfica durante un dia",
+      "Diferentes ambientaciones",
+      "Fotografias a tu estilo",
+      "Video Clip de la sesion fotografica",
+      "Acceso a tus fotos desde la nube"
+     ],
+     "price": 15000,
+     "image": "asd"
+    },
+    {
+     "id": 4,
+     "name": "Recepciones",
+     "title": "Fiesta de Egrasados",
+     "description": [
+      "Sesión fotográfica del Último primer día",
+      "Sesión fotográfica pre egreso",
+      "Video Clip de la sesion pre egreso",
+      "Video clip sobre el Curso",
+      "Fotografia durante el evento",
+      "Fotografia en estudio Fotografico",
+      "Filmacion durante el evento",
+      "Acceso a tus fotos desde la nube"
+     ],
+     "price": 100000,
+     "image": "asd"
+    }
+    
+   ]
