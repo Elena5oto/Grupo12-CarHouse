@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+.no_va{
+    display: none;
+}
+
 .body-carrito{
     background-image: url(../images/fondo1.jpg) ;
     background-attachment: fixed;
@@ -253,6 +257,29 @@
     padding: 10px 26px;
     color: #222222;
 
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.nav > li {
+    float: left;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nav li:hover > ul {
+    display: block;
+    background-color: rgb(219, 209, 209, .7);
+   
+    
 }
 
 .slider{

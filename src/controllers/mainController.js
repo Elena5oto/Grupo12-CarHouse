@@ -1,3 +1,13 @@
+const { SSL_OP_NO_TLSv1_1 } = require('constants');
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+
 const controller = {
     //Mitzio
     home: (req, res) =>{
@@ -21,7 +31,23 @@ const controller = {
     },
     
     CargaEdicionProducto: (req, res) => {
-        res.render('CargaEdicionProducto')
+        res.render('productsload')
+    },
+
+    cargarProducto: (req, res) => {
+        const {name, title, description, price, image}= req.body;
+        let ids= products.map(p=>p.id)
+        let newProduct= {
+            id: Math.max(...ids)+1,
+            name,
+            title,
+            description,
+            price,
+            image
+        }
+        products.push(newProduct)
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+        res.redirect('/paquetes');
     },
     
     //Elena   
