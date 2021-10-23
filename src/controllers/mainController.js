@@ -19,10 +19,14 @@ const controller = {
         res.render('home');
     }, 
     product: (req, res) =>{
-        res.render('productDetail')
+        let id = req.params.id;
+        let producto = products.find(producto => producto.id == id);
+        console.log(producto);
+        res.render('productDetail', {product: producto})
     },
     list_of_products: (req, res)=>{
-        res.render('list_of_products')
+        console.log(products);
+        res.render('list_of_products', {products : products })
     },
 
     //Carlos

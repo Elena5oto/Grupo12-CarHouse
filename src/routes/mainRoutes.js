@@ -33,7 +33,7 @@ const storage = multer.diskStorage({
 let upload = multer({storage});
 
 router.get('/', controllers.home);
-router.get('/paquetes/producto', controllers.product);
+router.get('/detail/:id', controllers.product);
 router.get('/paquetes', controllers.list_of_products);
 
 

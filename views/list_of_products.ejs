@@ -13,44 +13,22 @@
         <div class="listconteiner">
             <h2>Nuestros servicios:</h2>
             <div class="conteinerlistcolumn">
-                <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" class="cardoflist">
-                    <div class="imgoflistcard">
-                        <img src="/images/works_preview/preview1.jpg" alt="">
-                        <h3>Bodas</h3>
-                    </div>
-                    <div class="buttoncardlist">
-                        <a href="/paquetes/producto">Conocer más</a>
-                    </div>
-                </div>
-                <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" class="cardoflist">
-                    <div class="imgoflistcard">
-                        <img src="/images/paquetes_img/giuliana fiest  (450).jpg" alt="">
-                        <h3>15 Años</h3>
-                    </div>
-                    <div class="buttoncardlist">
-                        <a href="">Conocer más</a>
+                <% for(let i = 0; i < products.length; i++) {%>
+                    
+                    <div class="cardoflist">
+                        <div class="imgoflistcard">
+                            <img src="/images/products/<%= products[i].image %>" alt="">
+                            <h3><%=products[i].name%> </h3>
+                        </div>
+                        <div class="buttoncardlist">
+                            <a href="/detail/<%=products[i].id%> ">Conocer más</a>
+                        </div>
                     </div>
                     
-                </div>
-                <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" class="cardoflist">
-                    <div class="imgoflistcard">
-                        <img src="/images/new_fotos/sesiones (5).jpg" alt="">
-                        <h3>Sesiones</h3>
-                    </div>
-                    <div class="buttoncardlist">
-                        <a href="">Conocer más</a>
-                    </div>
                     
-                </div>
-                <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" class="cardoflist">
-                    <div class="imgoflistcard">
-                        <img src="/images/new_fotos/resepsiones (9).jpg" alt="">
-                        <h3>Recepciones</h3>
-                    </div>
-                    <div class="buttoncardlist">
-                        <a href="">Conocer más</a>
-                    </div>
-                </div>
+                    
+                    <% } %>
+
             </div>
            
     
@@ -61,13 +39,18 @@
     <script type="text/javascript" src="/js/scroll-out.min.js"></script>
     <script type="text/javascript">
     let vw = window.innerWidth;
-    vw < 1200 ? 
-    ScrollOut({
+    vw < 1200 ?
+        ScrollOut({
         targets: ".cardoflist",
         threshold: 0.8
-        
-      })
-      : '';
+    }) : VanillaTilt.init(document.querySelectorAll(".cardoflist"), {
+		max: 15,
+		speed: 300,
+        glare: true,
+        "max-glare": 0.8,
+        perspective: 1000
+	});
+     
     </script>
 
 </script>
