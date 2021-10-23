@@ -76,12 +76,13 @@ const controller = {
 //login y validacion---------------------------------------------------------------------
       
         loginValidator: (req, res) =>{
-            let errores = validationResult(req);
+           /* let errores = validationResult(req);
             if(!errores.isEmpty()){
                 return res.render('login',
                 {mensajesDeError: errores.mapped()})
                 
             }
+            */
 
         let email= req.body.email;
         let password = req.body.password
