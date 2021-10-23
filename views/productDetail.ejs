@@ -11,7 +11,7 @@
 
     <main>
         <div class="slider">
-            <h2 class="title_slider" >Fiesta de 15 años</h2>
+            <h2 class="title_slider" ><%= product.title%></h2>
             <div class="slide">
                 <img src="/images/slider15años/slider2.jpg" alt="">
             </div>
@@ -36,14 +36,12 @@
             <h2>El servicio incluye</h2>
             <div class="list_services">
                 <ul>
-                    <li>Sesión fotográfica pre 15 años</li>
-                    <li>Vide Clip de la sesion fotografica</li>
-                    <li>Historia de Vida</li>
-                    <li>Fotografia durante el evento</li>
-                    <li>Filmacion durante el evento</li>
-                    <li>Acceso a tus fotos desde la nube</li>
+                    <% for (let i in product.description) {%>
+                        <li><%=product.description[i]%></li>
+                        
+                        <% } %>  
                 </ul>
-                <h3>Valor: $50.000</h3>
+                <h3>Valor: $<%= product.precio%></h3>
             </div>
             <div class="btn_services">
                 <button type="button">Contratar</button>

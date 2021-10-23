@@ -614,6 +614,7 @@ ul, ol {
     height: 400px;
     width: 300px;
     justify-content: center;
+    transform: perspective(1000px);
     align-items: center;
     background: #232323;
     box-shadow: 0 8px 32px  0 rgba(0, 0, 0, 0.2);
@@ -637,7 +638,7 @@ ul, ol {
     max-width: 100%;
     transform-style: preserve-3d;
     
-    
+    transform: translateZ(50px);
     border-radius: 2px;
     margin-bottom: 10px;
     transition: 0.9s ease-in-out;
