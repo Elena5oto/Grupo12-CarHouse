@@ -375,7 +375,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    clip-path: circle(0.9% at 96% 4%);
+    clip-path: circle(0.0% at 96% 4%);
     transition: 0.5s ease-in-out;
 }
 .mobile_nav a{
