@@ -1,9 +1,10 @@
 [
-    {
-        "id": 1,
-        "firstName": "Eduardo",
-        "lastName": "Roldán",
-        "email": "eduardoroldan@gmail.com",
-        "password": "admin123456"
-    }
+ {
+  "id": 1,
+  "nombreCompleto": "Eduardo Roldan",
+  "email": "eduardoroldan@gmail.com",
+  "usuario": "Eduardo_Admin",
+  "password": "admin123456"
+ }
+
 ]

@@ -28,5 +28,6 @@ app.use('/register', mainroutes);
 app.use('/paquetes/productsLoad', mainroutes);
 app.use('/login', mainroutes)
 app.use('/paquetes/producto/productsEdit', mainroutes);
+app.use('/login_register', mainroutes)
 
 

@@ -10,17 +10,20 @@
 
     
     <main>
-        <form action="/" method="GET" class="login-form">
+        <form action="/login" method="POST" class="login-form">
              <div class="control-form">
-                 <label for="usuario">Nombre de usuario</label>
-                 <input type="text" name="usuario">
+                 <label for="email">Nombre de usuario</label>
+                 <input type="email" name="email" id="email" placeholder="usuario@usuario.com">
              </div>
              <div class="control-form">
                  <label for="password">Ingrese su contraseña</label>
-                 <input type="password" name="password">
+                 <input type="password" name="password" id="password">
              </div>
              <button type="submit" value="Enviar" class="boton-enviar">Enviar</button>
+             <br>
+             <%- include('./partials/validaciones') %>
         </form>
+        
      </main>
 
       <%- include('./partials/footer') %>

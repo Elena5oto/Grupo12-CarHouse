@@ -1,0 +1,5 @@
+<%if (locals && locals.mensajesDeError) { %>
+    <% for(let error in mensajesDeError) { %>
+            <h2 class="error_register"><p><%= mensajesDeError[error].msg %></p></h2>
+        <% } %>
+    <% } %>

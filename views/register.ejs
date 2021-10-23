@@ -9,27 +9,32 @@
 <body class="bodyregister">
     <main>
         <div class="cajaregister">
-        <form action="/" method="GET" class="login-form">
+        <form action="register" method="post" class="login-form">
              <div class="control-form">
-                 <label for="usuario">Nombre</label>
-                 <input type="text" name="usuario">
+                 <label for="firstname">Nombre</label>
+                 <input type="text" name="firstname" id="firstname" value="<%= locals.old && old.firstname ? old.firstname : ''%>">
              </div>
              <div class="control-form">
-                <label for="usuario">Apellido</label>
-                <input type="text" name="usuario">
+                <label for="lastname">Apellido</label>
+                <input type="text" name="lastname" id="lastname" value="<%= locals.old && old.lastname ? old.lastname : ''%>">
             </div>
             <div class="control-form">
-                <label for="usuario">email</label>
-                <input type="email" name="email">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : ''%>">
             </div>
              <div class="control-form">
                  <label for="password">Ingrese su contraseña</label>
-                 <input type="password" name="password">
+                 <input type="password" name="password" id="password">
              </div>
              <button type="submit" value="Enviar" class="boton-enviar">Registrarse</button>
+        <!--validaciones-->
+        <br>
+        <%- include('./partials/validaciones') %>
         </form>
+        
         </div>
      </main>
+
      <%- include('./partials/footer') %>
 
 </body>

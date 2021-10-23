@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('./partials/head.ejs')%> 
+</head>
+<body class="body__login-register">
+    <%- include('./partials/header') %> 
+    <main class="main__login-register">
+        <div class="contenedor__todo">
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes cuenta?</h3>
+                    <p>Iniciar sesión para entrar en la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes cuenta?</h3>
+                    <p>Registrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Registrarse</button>
+                </div>
+            </div>
+            <div class="contenedor__login-register">
+                <form action="/login" method="post" class="formulario__login">
+                    <h2>Iniciar Sesión</h2>
+                    <input type="text" name="email" id="email" placeholder="Correo Electronico">
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <button>Iniciar Sesión</button>
+                </form>
+                <form action="/register" method="post" class="formulario__register">
+                    <h2>Registrarse</h2>
+                    <input type="text" name="nombreCompleto" id="nombre_completo" placeholder="Nombre completo" required>
+                    <input type="email" name="email" id="email" placeholder="Correo Electronico" required>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario" required>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                  
+                    <button>Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="/js/script_login_register.js"></script>
+</body>
+</html>

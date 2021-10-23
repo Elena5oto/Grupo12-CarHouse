@@ -3,7 +3,25 @@ const router = express.Router();
 const controllers = require('../controllers/mainController.js');
 const path = require('path');
 const multer = require('multer')
+const { body } = require('express-validator')
 
+/*
+//validaciones
+const validacionesRegister = [
+    body("nombreCompleto").notEmpty().withMessage("Ingrese nombre completo"),
+    body("email")
+        .notEmpty().withMessage("Ingrese Email").bail()
+        .isEmail().withMessage("Ingrese Email valido"),
+    body("usuario").notEmpty().withMessage("ingrese un nombre de Usuario"),
+    body("password").notEmpty().withMessage("Ingrese Contraseña"),
+];
+
+const validacionesLogin = [
+    body("email").notEmpty().withMessage("Ingrese su correo electronico").bail()
+                 .isEmail().withMessage("Ingrese un correo valido"),
+    body("password").notEmpty().withMessage("ingresar contraseña"),
+]
+*/
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, './public/images/products')
@@ -22,17 +40,21 @@ router.get('/paquetes', controllers.list_of_products);
 router.get('/carrito', controllers.carrito);
 
 
-router.get('/register', controllers.register);
+//router.get('/register', controllers.register);
+router.get('/login_register' , controllers.login_register);
+router.post('/register', /*validacionesRegister,*/ controllers.loadRegister);
 
 router.get('/paquetes/productsLoad', controllers.CargaEdicionProducto);
-
 router.post('/paquetes/productsLoad', controllers.cargarProducto);
 
 
-router.get('/login' , controllers.login);
+//router.get('/login' , controllers.login);
+router.post('/login' , /*validacionesLogin,*/ controllers.loginValidator);
 
 router.get('/paquetes/producto/productsEdit/:id', controllers.productsEdit);
 router.put('/:id', controllers.update); 
+
+//prueba
 
 
 
