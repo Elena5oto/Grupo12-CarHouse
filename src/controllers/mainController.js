@@ -34,20 +34,22 @@ const controller = {
         res.render('carrito')
     },
 //carga de Productos nuevos------------------------------------------------------------
-    cargarProducto: (req, res) => {
-        const {name, title, description, price, image}= req.body;
+   cargarProducto: (req, res) => {
+        const {name, title, price, image}= req.body;
+        //const $divElements = req.id.divElements
         let ids= products.map(p=>p.id)
         let newProduct= {
             id: Math.max(...ids)+1,
             name,
             title,
-            description,
+            
             price,
             image
         }
+       
         products.push(newProduct)
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-        res.redirect('/paquetes');
+        //res.redirect('/paquetes');
     },
 //---------------------------------------------------------------------------
 //Edicion de Productos-------------------------------------------------------
