@@ -148,6 +148,10 @@ const controller = {
         res.render('productsLoad')
     },
 
+    productDelete: (req, res) => {
+        res.render ("productDelete")
+    }
+
     
     
     //Elena   
