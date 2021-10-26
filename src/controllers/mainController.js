@@ -148,9 +148,14 @@ const controller = {
         res.render('productsLoad')
     },
 
-    productDelete: (req, res) => {
-        res.render ("productDelete")
+    delete: (req, res) =>{
+        let id = req.params.id;
+        let finalProduct = product.filter(productos =>product.id !=id)
+        fs.writeFileSync (productsFilePath,JSON.stringify(finalProduct,null," "))
+        res.redirect ('/paquetes');
+       
     },
+
 
     
     
