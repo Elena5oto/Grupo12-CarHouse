@@ -542,8 +542,35 @@ ul, ol {
     width: 100%;
     align-content: center;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
+
+.btn_services a{
+    padding: 10px 12px;
+    color: white;
+    text-align: center;
+    margin: 5px;
+    background-color: #323436f0;
+    transform: translateZ(20px);
+    border-radius: 40px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.contratar_btn, .llamada_btn{
+    width: 40%;
+}
+.contratar_btn:hover, .llamada_btn:hover{
+    background-color: #323436;
+}
+.btn_services .editar_btn_detail{
+    width: 50%;
+}
+.btn_services .eliminar_btn_detail{
+    background-color: #fc4f38;
+    width: 50%;
+}
+
 @keyframes slider{
     0%{
         
@@ -678,7 +705,23 @@ ul, ol {
     visibility:visible;
     transform: translateY(-40px);
 } 
-
+.plus_div .fa-plus{
+    color: rgb(20, 20, 20);
+    font-size: 25px;
+    line-height: 50px;
+}
+.plus_div {
+    background: #363636;
+    width: 50px;
+    position: fixed;
+    height: 50px;
+    right: 0;
+    bottom: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 50px
+}
 /* fin lista de productos */
 .trabajos_bloks{
     display: flex;
@@ -850,6 +893,10 @@ ul, ol {
             opacity: 1;
             visibility:visible;
             transform: translateY(-40px);
+        }
+        .plus_div{
+            margin-right: 15px;
+            margin-bottom: 15px;
         }
         /* Fin de Lista de productos */
         /* nav bar */

@@ -148,17 +148,27 @@ const controller = {
         res.render('productsLoad')
     },
 
+    delete: (req, res) =>{
+        let id = req.params.id;
+        let finalProduct = product.filter(productos =>product.id !=id)
+        fs.writeFileSync (productsFilePath,JSON.stringify(finalProduct,null," "))
+        res.redirect ('/paquetes');
+       
+    },
+
+
     
     
     //Elena   
-    login:( req, res)=> {
+    login:( req , res)=> {
         res.render('login')
     },
+
 
     //prueba
     login_register: (req, res) => {
         res.render('login_register')
-    },
+    }
 }
 
 module.exports = controller; 
