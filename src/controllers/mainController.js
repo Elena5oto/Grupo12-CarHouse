@@ -150,19 +150,20 @@ const controller = {
 
     productDelete: (req, res) => {
         res.render ("productDelete")
-    }
+    },
 
     
     
     //Elena   
-    login:( req, res)=> {
+    login:( req , res)=> {
         res.render('login')
     },
+
 
     //prueba
     login_register: (req, res) => {
         res.render('login_register')
-    },
+    }
 }
 
 module.exports = controller; 
