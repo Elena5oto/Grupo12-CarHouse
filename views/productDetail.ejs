@@ -50,7 +50,9 @@
                 <br>
                 <br>
                 <a class="editar_btn_detail"href="/paquetes/producto/productsEdit/1">Editar</a>
-                <a class="eliminar_btn_detail"href="/:id">Eliminar</a>
+                <form action="/paquetes/producto/<%= product.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="eliminar_btn_detail">ELIMINAR</button>
+                </form>
             </div>
 <!--
         </div>

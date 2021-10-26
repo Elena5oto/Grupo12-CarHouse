@@ -149,8 +149,8 @@ const controller = {
     },
 
     delete: (req, res) =>{
-        let id = req.params.id;
-        let finalProduct = product.filter(productos =>product.id !=id)
+        let ids = req.params.id;
+        let finalProduct = products.filter(products =>products.id !=ids)
         fs.writeFileSync (productsFilePath,JSON.stringify(finalProduct,null," "))
         res.redirect ('/paquetes');
        

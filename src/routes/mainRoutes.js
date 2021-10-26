@@ -54,7 +54,7 @@ router.post('/login' , /*validacionesLogin,*/ controllers.loginValidator);
 router.get('/paquetes/producto/productsEdit/:id', controllers.productsEdit);
 router.put('/:id', controllers.update); 
 
-router.get('/paquetes/producto/productDelete/:Id', controllers.productDelete);
+
 router.delete('/:id', controllers.delete);
 
 
