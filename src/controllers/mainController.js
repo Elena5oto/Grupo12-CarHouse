@@ -4,7 +4,7 @@ const path = require('path');
 const {validationResult} = require("express-validator");
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+var products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const tempUsersFilePath = path.join(__dirname, '../data/tempUsers.json');
 const tempUsers = JSON.parse(fs.readFileSync(tempUsersFilePath, 'utf-8'));
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -49,6 +49,7 @@ const controller = {
        
         products.push(newProduct)
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+        
         res.redirect('/paquetes');
     },
 //---------------------------------------------------------------------------
@@ -75,6 +76,7 @@ const controller = {
 		})
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		res.redirect('/paquetes');
 	},
 //----------------------------------------------------------------------------------------
@@ -152,6 +154,7 @@ const controller = {
         let ids = req.params.id;
         let finalProduct = products.filter(products =>products.id !=ids)
         fs.writeFileSync (productsFilePath,JSON.stringify(finalProduct,null," "))
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.redirect ('/paquetes');
        
     },
