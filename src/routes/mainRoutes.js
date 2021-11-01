@@ -31,7 +31,7 @@ const storage = multer.diskStorage({
         cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
      }
  });
-let upload = multer({storage});
+ var upload = multer({ storage: storage })
 
 router.get('/', controllers.home);
 router.get('/detail/:id', controllers.product);
@@ -47,14 +47,14 @@ router.post('/register',validacionesRegister, controllers.loadRegister);
 router.post('/login' ,validacionesLogin, controllers.loginValidator);
 
 router.get('/paquetes/productsLoad', controllers.CargaEdicionProducto);
-router.post('/paquetes/productsLoad', controllers.cargarProducto);
+router.post('/paquetes/productsLoad', upload.single('image'), controllers.cargarProducto);
 
 
 //router.get('/login' , controllers.login);
 
 
 router.get('/paquetes/producto/productsEdit/:id', controllers.productsEdit);
-router.put('/:id', controllers.update); 
+router.put('/:id', upload.single('image'), controllers.update); 
 
 
 router.delete('/:id', controllers.delete);

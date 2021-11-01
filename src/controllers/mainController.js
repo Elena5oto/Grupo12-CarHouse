@@ -5,7 +5,7 @@ const {validationResult} = require("express-validator");
 
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
-var products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const tempUsersFilePath = path.join(__dirname, '../data/tempUsers.json');
 const tempUsers = JSON.parse(fs.readFileSync(tempUsersFilePath, 'utf-8'));
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -36,21 +36,24 @@ const controller = {
     },
 //carga de Productos nuevos------------------------------------------------------------
    cargarProducto: (req, res) => {
-        const {name, title, description, price, image}= req.body;
-        
+        let image 
+
+        if(req.file != undefined){
+            image = req.file.filename
+        } else {
+            image = 'Logo_white.png'
+        }
+
         let ids= products.map(p=>p.id)
         let newProduct= {
             id: Math.max(...ids)+1,
-            name,
-            title,
-            description,
-            price,
-            image
-        }
+            ...req.body,
+            image: image
+        };
        
         products.push(newProduct)
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-        
+       
         res.redirect('/paquetes');
     },
 //---------------------------------------------------------------------------
@@ -63,10 +66,17 @@ const controller = {
     update: (req, res) => { 
         let ids= req.params.id;
         let productToEdit = products.find(product => product.id == ids)
-        
+        let image
+        if(req.file != undefined){
+            image = req.file.filename
+        } else{
+            image = productToEdit.image
+        }
+
         productToEdit = {
 			id: productToEdit.id,
-			...req.body,	
+			...req.body,
+            image : image
 		};
 		
 		let newProducts = products.map(product => {

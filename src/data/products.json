@@ -20,14 +20,14 @@
   "name": "15 Años",
   "title": "Fista de 15 años",
   "description": [
-    "Sesión fotográfica pre 15 años",
-    "Video Clip de la sesion fotografica",
-    "Historia de Vida",
-    "Fotografia durante el evento",
-    "Filmacion durante el evento",
-    "Acceso a tus fotos desde la nube"
-],
-"precio": 50000,
+   "Sesión fotográfica pre 15 años",
+   "Video Clip de la sesion fotografica",
+   "Historia de Vida",
+   "Fotografia durante el evento",
+   "Filmacion durante el evento",
+   "Acceso a tus fotos desde la nube"
+  ],
+  "precio": 50000,
   "image": "giuliana fiest  (450).jpg"
  },
  {
@@ -60,5 +60,26 @@
   ],
   "precio": 100000,
   "image": "resepsiones (9).jpg"
+ },
+ {
+  "id": 5,
+  "name": "asdfg",
+  "title": "sdfg",
+  "description": "asdfgh",
+  "price": "12345"
+ },
+ {
+  "id": 6,
+  "name": "asdf",
+  "title": "sdf",
+  "description": "sdfg",
+  "price": "1234"
+ },
+ {
+  "id": 7,
+  "name": "sdfgh",
+  "title": "dfgh",
+  "description": "sdfgh",
+  "price": "2345"
  }
 ]

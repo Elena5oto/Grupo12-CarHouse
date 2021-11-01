@@ -9,7 +9,7 @@
     <%- include("./partials/header2.ejs") %>
     
     <div class="container p-4">
-        <form method="post" action="productsload" class="card card-body">
+        <form method="post" action="/paquetes/productsLoad" enctype="multipart/form-data" class="card card-body">
             <div class="form-group">
                 <label for="name">Nombre</label>
                 <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" autofocus required autocomplete="off">
@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
                 <label for="image">Imagenes</label>
-                <input type="text" class="form-control" name="image" id="image" placeholder="Inserte su imagen" autofocus required autocomplete="off">
+                <input type="file" class="form-control" name="image" id="image" placeholder="Inserte su imagen" autofocus required autocomplete="off" value="">
             </div>
             <br>
           
