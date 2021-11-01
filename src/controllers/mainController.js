@@ -4,7 +4,7 @@ const path = require('path');
 const {validationResult} = require("express-validator");
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+var products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const tempUsersFilePath = path.join(__dirname, '../data/tempUsers.json');
 const tempUsers = JSON.parse(fs.readFileSync(tempUsersFilePath, 'utf-8'));
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -35,21 +35,22 @@ const controller = {
     },
 //carga de Productos nuevos------------------------------------------------------------
    cargarProducto: (req, res) => {
-        const {name, title, price, image}= req.body;
-        //const $divElements = req.id.divElements
+        const {name, title, description, price, image}= req.body;
+        
         let ids= products.map(p=>p.id)
         let newProduct= {
             id: Math.max(...ids)+1,
             name,
             title,
-            
+            description,
             price,
             image
         }
        
         products.push(newProduct)
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-        //res.redirect('/paquetes');
+        
+        res.redirect('/paquetes');
     },
 //---------------------------------------------------------------------------
 //Edicion de Productos-------------------------------------------------------
@@ -75,6 +76,7 @@ const controller = {
 		})
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		res.redirect('/paquetes');
 	},
 //----------------------------------------------------------------------------------------
@@ -148,17 +150,28 @@ const controller = {
         res.render('productos_load')
     },
 
+    delete: (req, res) =>{
+        let ids = req.params.id;
+        let finalProduct = products.filter(products =>products.id !=ids)
+        fs.writeFileSync (productsFilePath,JSON.stringify(finalProduct,null," "))
+        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.redirect ('/paquetes');
+       
+    },
+
+
     
     
     //Elena   
-    login:( req, res)=> {
+    login:( req , res)=> {
         res.render('login')
     },
+
 
     //prueba
     login_register: (req, res) => {
         res.render('login_register')
-    },
+    }
 }
 
 module.exports = controller; 

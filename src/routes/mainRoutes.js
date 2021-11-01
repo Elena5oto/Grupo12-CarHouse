@@ -48,11 +48,15 @@ router.get('/paquetes/productsLoad', controllers.CargaEdicionProducto);
 router.post('/paquetes/productsLoad', controllers.cargarProducto);
 
 
-//router.get('/login' , controllers.login);
+router.get('/login' , controllers.login);
 router.post('/login' , /*validacionesLogin,*/ controllers.loginValidator);
 
 router.get('/paquetes/producto/productsEdit/:id', controllers.productsEdit);
 router.put('/:id', controllers.update); 
+
+
+router.delete('/:id', controllers.delete);
+
 
 //prueba
 

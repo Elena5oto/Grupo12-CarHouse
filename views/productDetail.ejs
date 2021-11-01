@@ -49,8 +49,10 @@
                 <a class="llamada_btn" href="">Resevar una llmada</a>
                 <br>
                 <br>
-                <a class="editar_btn_detail"href="/paquetes/producto/productsEdit/1">Editar</a>
-                <a class="eliminar_btn_detail"href="">Eliminar</a>
+                <a class="editar_btn_detail"href="/paquetes/producto/productsEdit/<%= product.id %>">Editar</a>
+                <form action="/paquetes/producto/<%= product.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="eliminar_btn_detail">ELIMINAR</button>
+                </form>
             </div>
 <!--
         </div>
