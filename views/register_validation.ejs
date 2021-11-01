@@ -11,7 +11,10 @@
                 <div class="caja__trasera-login">
                     <h3>¿Ya tienes cuenta?</h3>
                     <p>Iniciar sesión para entrar en la página</p>
-                    <button id="btn__iniciar-sesion" >Iniciar Sesión</button>
+                    <br>
+                    <br>
+                
+                    <a  id="btn__iniciar-sesion" href="/login_register">Iniciar Sesión</a>
                 </div>
                 <div class="caja__trasera-register">
                     <h3>¿Aún no tienes cuenta?</h3>
@@ -19,23 +22,25 @@
                     <button id="btn__registrarse">Registrarse</button>
                 </div>
             </div>
-            <div class="contenedor__login-register" color= red >
-                <form action="/login" method="post" class="formulario__login">
-                    <h2>Iniciar Sesión</h2>
-                    <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>">
-                    <input type="password" name="password" id="password" placeholder="Contraseña">
-                    <button id="btn_iniciar-sesion">Iniciar Sesión</button>
-                    
-                </form>
-                <form action="/register" method="post" class="formulario__register">
+            <div class="contenedor__login-register">
+                <form action="/register" method="post" class="formulario_register">
                     <h2>Registrarse</h2>
-                    <input type="text" name="nombreCompleto" id="nombre_completo" placeholder="Nombre completo" value="<%= locals.old && old.nombre_completo ? old.nombre_completo : ''%>" >
+                    <input type="text" name="nombreCompleto" id="nombreCompleto" placeholder="Nombre completo" value="<%= locals.old && old.nombreCompleto ? old.nombreCompleto : ''%>" >
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>" >
                     <input type="text" name="usuario" id="usuario" placeholder="Usuario" value="<%= locals.old && old.usuario ? old.usuario : ''%>">
                     <input type="password" name="password" id="password" placeholder="Contraseña" >
                     <button id="btn_registrarse" >Registrarse</button>
                     
                 </form>
+
+                <form  method="post" class="formulario_login">
+                    <h2>Iniciar Sesión</h2>
+                    <input type="text" name="email" id="email" placeholder="Correo Electronico" >
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <button id="btn_iniciar-sesion">Iniciar Sesión</button>
+                    
+                </form>
+               
             </div>
             <br> <!--validaciones-->
 
@@ -44,6 +49,6 @@
                
         </div>
     </main>
-    <script src="/js/script_login_register.js"></script>
+    <script src="/js/script_register.js"></script>
 </body>
 </html>

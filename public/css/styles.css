@@ -136,6 +136,40 @@
     display: none;
 }
 
+.formulario_login{
+    display: none;
+}
+
+.formulario_register{
+    opacity: 1;
+    display: block;
+    left: 400px;
+}
+
+.caja__trasera div a{
+    margin-top: 30px;
+    
+}
+.caja__trasera a{
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    text-decoration: none;
+    
+}
+
+.caja__trasera a:hover{
+    background: #fff;
+    color: #8a939c;
+}
+
+
 /*responsive*/
 
 @media screen and (max-width: 850px){
@@ -170,11 +204,12 @@
 /*fin login nuevo---------------------------------*/
 
 .error_register{
-    background-color: rgba(245, 141, 6, 0.7);
+    background-color: rgba(245, 54, 6, 0.4);
     font-size: 15px;
     color: white;
     text-align: center;
-    border-radius: 80%;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
 
 }
 

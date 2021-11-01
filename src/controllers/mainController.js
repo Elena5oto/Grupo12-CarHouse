@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const {validationResult} = require("express-validator");
 
+
 const productsFilePath = path.join(__dirname, '../data/products.json');
 var products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const tempUsersFilePath = path.join(__dirname, '../data/tempUsers.json');
@@ -84,28 +85,17 @@ const controller = {
 //login y validacion---------------------------------------------------------------------
       
         loginValidator: (req, res) =>{
-           /* let errores = validationResult(req);
+            let errores = validationResult(req);
             if(!errores.isEmpty()){
-                return res.render('login',
-                {mensajesDeError: errores.mapped()})
-                
+                return res.render('login_register',
+                {mensajesDeError: errores.mapped(),
+                old: req.body,
+                })    
             }
-            */
-
-        let email= req.body.email;
-        let password = req.body.password
-       
-        let validationUser = {
             
-            ...req.body
-        }; 
-       
-        tempUsers.push(validationUser)
-        fs.writeFileSync(tempUsersFilePath, JSON.stringify(tempUsers, null, ' '));
-        res.redirect('/');
-       
-		
-		
+
+     
+
         
         //console.log(email)
         //console.log(password)
@@ -121,14 +111,14 @@ const controller = {
     },
     
     loadRegister: (req, res) =>{
-        /*let errores = validationResult(req);
+        let errores = validationResult(req);
         if(!errores.isEmpty()){
-            return res.render('login_register',
+            return res.render('register_validation',
             {mensajesDeError: errores.mapped(),
              old: req.body,
             })
            
-        } */
+        } 
         const {nombreCompleto, email, usuario, password}= req.body;
         let ids= users.map(p=>p.id)
         let newUser= {

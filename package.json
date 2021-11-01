@@ -13,6 +13,7 @@
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-session": "^1.17.2",
     "express-validator": "^6.13.0",
     "http-errors": "~1.6.3",
     "method-override": "^3.0.0",
@@ -28,6 +29,5 @@
     "url": "https://github.com/Elena5oto/Grupo_12_EduardoRoldanFotografia/issues"
   },
   "homepage": "https://github.com/Elena5oto/Grupo_12_EduardoRoldanFotografia#readme",
-  "keywords": [],
-  "devDependencies": {}
+  "keywords": []
 }
