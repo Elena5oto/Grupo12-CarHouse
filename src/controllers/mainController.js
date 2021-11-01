@@ -147,7 +147,7 @@ const controller = {
 
     
     CargaEdicionProducto: (req, res) => {
-        res.render('productos_load')
+        res.render('productsLoad')
     },
 
     delete: (req, res) =>{
