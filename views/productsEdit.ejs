@@ -31,11 +31,11 @@
             </div>
             <div class="form-group">
                 <label for="precio">Precio</label>
-                <input type="text" class="form-control" name="precio" id="precio" placeholder="Precio" autofocus required autocomplete="off" value="<%= productToEdit.price %>">
+                <input type="number" class="form-control" name="precio" id="precio" placeholder="Precio" autofocus required autocomplete="off" value="<%= productToEdit.price %>">
             </div>
             <div class="form-group">
                 <label for="image">Imagenes</label>
-                <input type="file" class="form-control" name="image" id="image" placeholder="Inserte su imagen" autofocus required autocomplete="off" value="<%= productToEdit.image %>">
+                <input type="file" class="form-control" name="image" id="image" placeholder="Inserte su imagen" autofocus  autocomplete="off" value="<%= productToEdit.image %>">
             </div>
             <br>
             <%- include('./partials/validaciones.ejs') %> 
