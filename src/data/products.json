@@ -63,23 +63,18 @@
  },
  {
   "id": 5,
-  "name": "asdfg",
-  "title": "sdfg",
-  "description": "asdfgh",
-  "price": "12345"
+  "name": "dadas",
+  "title": "dsad",
+  "description": "dsada",
+  "price": "2000",
+  "image": "Logo_white.png"
  },
  {
   "id": 6,
-  "name": "asdf",
-  "title": "sdf",
-  "description": "sdfg",
-  "price": "1234"
- },
- {
-  "id": 7,
-  "name": "sdfgh",
-  "title": "dfgh",
-  "description": "sdfgh",
-  "price": "2345"
+  "name": "kjfdhdfs",
+  "title": "fdssd",
+  "description": "fsdf",
+  "precio": "2000",
+  "image": "Logo_white.png"
  }
 ]
