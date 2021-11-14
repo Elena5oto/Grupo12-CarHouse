@@ -60,21 +60,5 @@
   ],
   "precio": 100000,
   "image": "resepsiones (9).jpg"
- },
- {
-  "id": 5,
-  "name": "dadas",
-  "title": "dsad",
-  "description": "dsada",
-  "price": "2000",
-  "image": "Logo_white.png"
- },
- {
-  "id": 6,
-  "name": "kjfdhdfs",
-  "title": "fdssd",
-  "description": "fsdf",
-  "precio": "2000",
-  "image": "Logo_white.png"
  }
 ]

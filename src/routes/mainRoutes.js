@@ -4,6 +4,9 @@ const controllers = require('../controllers/mainController.js');
 const path = require('path');
 const multer = require('multer');
 const { body } = require('express-validator');
+let guestmiddleware = require('../middlewares/guest_middleware');
+let authmiddleware = require('../middlewares/auth_middleware');
+
 
 
 
@@ -42,9 +45,9 @@ router.get('/carrito', controllers.carrito);
 
 
 //router.get('/register', controllers.register);
-router.get('/login_register' , controllers.login_register);
-router.post('/register',validacionesRegister, controllers.loadRegister);
-router.post('/login' ,validacionesLogin, controllers.loginValidator);
+router.get('/login_register' , guestmiddleware, controllers.login_register);
+router.post('/register', guestmiddleware, validacionesRegister, controllers.loadRegister);
+router.post('/login' , guestmiddleware, validacionesLogin, controllers.loginValidator);
 
 router.get('/paquetes/productsLoad', controllers.CargaEdicionProducto);
 router.post('/paquetes/productsLoad', upload.single('image'), controllers.cargarProducto);

@@ -2,6 +2,9 @@ const { SSL_OP_NO_TLSv1_1 } = require('constants');
 const fs = require('fs');
 const path = require('path');
 const {validationResult} = require("express-validator");
+const { log } = require('console');
+let bcrypt= require('bcryptjs');
+
 
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -102,14 +105,36 @@ const controller = {
                 old: req.body,
                 })    
             }
-            
+        let userlogin = users.find(user => user.email == req.body.email)
+        if(userlogin){
+          
+            if(bcrypt.compareSync(req.body.password, userlogin.password)){
+                delete userlogin.password;
+                req.session.userlog = userlogin;
+                console.log(req.session.userlog);
+                return res.redirect('/')
+            }
+        }
+        return res.render('login_register',{
+                    mensajesDeError: {
+                        eror: {
+                                msg: 'Las credenciales son invalidas'
+                }
+                }
+                })    
+        
+        
+        console.log(req.body.email);
+        console.log(userlogin);
+        res.send(userlogin);
+
 
      
 
         
         //console.log(email)
         //console.log(password)
-        console.log(validationUser)
+        // console.log(validationUser)
     },
      
 //---------------------------------------------------------------------------------------------
