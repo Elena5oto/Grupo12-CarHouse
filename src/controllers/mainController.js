@@ -2,8 +2,11 @@ const { SSL_OP_NO_TLSv1_1 } = require('constants');
 const fs = require('fs');
 const path = require('path');
 const {validationResult} = require("express-validator");
+
 const { log } = require('console');
 let bcrypt= require('bcryptjs');
+
+
 
 
 
@@ -99,12 +102,14 @@ const controller = {
       
         loginValidator: (req, res) =>{
             let errores = validationResult(req);
+            console.log(errores);
             if(!errores.isEmpty()){
                 return res.render('login_register',
                 {mensajesDeError: errores.mapped(),
                 old: req.body,
                 })    
             }
+
         let userlogin = users.find(user => user.email == req.body.email)
         if(userlogin){
           
@@ -135,6 +140,7 @@ const controller = {
         //console.log(email)
         //console.log(password)
         // console.log(validationUser)
+
     },
      
 //---------------------------------------------------------------------------------------------
@@ -152,17 +158,23 @@ const controller = {
             {mensajesDeError: errores.mapped(),
              old: req.body,
             })
-           
         } 
-        const {nombreCompleto, email, usuario, password}= req.body;
+
+        let image 
+        if(req.file != undefined){
+            image = req.file.filename
+        } else {
+            image = 'default-user.png'
+        }
+        const {nombreCompleto, email, password, usuario}= req.body;
         let ids= users.map(p=>p.id)
         let newUser= {
             id: Math.max(...ids)+1,
             nombreCompleto,
             email,
             usuario,
-            password,
-            
+            password: bcrypt.hashSync(req.body.password, 10),
+            image: image
         }
         users.push(newUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
@@ -185,10 +197,10 @@ const controller = {
     },
 
 
-    
-    
+
+
     //Elena   
-    login:( req , res)=> {
+login:( req , res)=> {
         res.render('login')
     },
 

@@ -8,23 +8,18 @@
  },
  {
   "id": 2,
-  "nombreCompleto": "asdasd",
+  "nombreCompleto": "alsmañslfm",
   "email": "c.l.08.cl@gmail.com",
-  "usuario": "dakel",
-  "password": "sdfgh1234"
+  "usuario": "carlos",
+  "password": "$2a$10$WCIuaqZCCkP45dP6x7mSseVIu98ZAPC2Pu9sVxfwyPD0AnSBEPome",
+  "image": "default-user.png"
  },
  {
   "id": 3,
-  "nombreCompleto": "1234567",
-  "email": "2345@12345.com",
-  "usuario": "12345",
-  "password": "1234567"
- },
- {
-  "id": 4,
-  "nombreCompleto": "",
-  "email": "",
-  "usuario": "",
-  "password": ""
+  "nombreCompleto": "test1",
+  "email": "test1@gmail.com",
+  "usuario": "test1",
+  "password": "$2a$10$uCgQyky2k15f2rX.rhdyguDqr2YWf8yU2C0sQD07dOFRX66Ykep5.",
+  "image": "default-user.png"
  }
 ]
