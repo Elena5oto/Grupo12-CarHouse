@@ -28,6 +28,10 @@
                     <input type="text" name="nombreCompleto" id="nombreCompleto" placeholder="Nombre completo" value="<%= locals.old && old.nombreCompleto ? old.nombreCompleto : ''%>" >
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>" >
                     <input type="text" name="usuario" id="usuario" placeholder="Usuario" value="<%= locals.old && old.usuario ? old.usuario : ''%>">
+                    <div id="div_file">
+                        <p id="texto">Cargar Foto Perfil</p>
+                            <input class="image_register" type="file" name="image" id="btn_enviar" placeholder="Imagen de Perfil">
+                    </div>
                     <input type="password" name="password" id="password" placeholder="Contraseña" >
                     <button id="btn_registrarse" >Registrarse</button>
                     

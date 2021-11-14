@@ -20,18 +20,23 @@
                 </div>
             </div>
             <div class="contenedor__login-register" color= red >
-                <form action="/login" method="post" class="formulario__login">
+                <form action="/login" method="post" enctype="multipart/form-data" class="formulario__login">
                     <h2>Iniciar Sesión</h2>
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>">
                     <input type="password" name="password" id="password" placeholder="Contraseña">
                     <button id="btn_iniciar-sesion">Iniciar Sesión</button>
                     
                 </form>
-                <form action="/register" method="post" class="formulario__register">
+                <form action="/register" method="post" enctype="multipart/form-data" class="formulario__register">
                     <h2>Registrarse</h2>
                     <input type="text" name="nombreCompleto" id="nombre_completo" placeholder="Nombre completo" value="<%= locals.old && old.nombre_completo ? old.nombre_completo : ''%>" >
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>" >
                     <input type="text" name="usuario" id="usuario" placeholder="Usuario" value="<%= locals.old && old.usuario ? old.usuario : ''%>">
+                    <div id="div_file">
+                        <p id="texto">Cargar Foto Perfil</p>
+                            <input class="image_register" type="file" name="image" id="btn_enviar" placeholder="Imagen de Perfil">
+                    </div>
+                    <a class="cuadro_register">as</a>
                     <input type="password" name="password" id="password" placeholder="Contraseña" >
                     <button id="btn_registrarse" >Registrarse</button>
                     
