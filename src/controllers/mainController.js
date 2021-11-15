@@ -126,7 +126,8 @@ const controller = {
                                 msg: 'Las credenciales son invalidas'
                 }
                 }
-                })    
+                })
+                
         
         
         console.log(req.body.email);
@@ -153,6 +154,7 @@ const controller = {
     
     loadRegister: (req, res) =>{
         let errores = validationResult(req);
+        console.log(req.body)
         if(!errores.isEmpty()){
             return res.render('register_validation',
             {mensajesDeError: errores.mapped(),

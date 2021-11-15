@@ -21,5 +21,13 @@
   "usuario": "test1",
   "password": "$2a$10$uCgQyky2k15f2rX.rhdyguDqr2YWf8yU2C0sQD07dOFRX66Ykep5.",
   "image": "default-user.png"
+ },
+ {
+  "id": 4,
+  "nombreCompleto": "test1",
+  "email": "test1@gmail.com",
+  "usuario": "test11",
+  "password": "$2a$10$KBf37v3ml65CcbQtHBGYXeRaiTcqpqnZ7Y/.bH2ro5pqKa1TXNptC",
+  "image": "default-user.png"
  }
 ]
