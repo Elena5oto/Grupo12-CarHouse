@@ -37,6 +37,7 @@ app.use('/carrito', mainroutes)
 app.use('/paquetes/productsLoad', mainroutes);
 
 app.use('/paquetes/producto/productsEdit', mainroutes);
-app.use('/login_register', userroutes);
+app.use('/user', userroutes);
+
 
 

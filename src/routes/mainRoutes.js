@@ -6,9 +6,7 @@ const multer = require('multer');
 const { body } = require('express-validator');
 let guestmiddleware = require('../middlewares/guest_middleware');
 let authmiddleware = require('../middlewares/auth_middleware');
-
-
-
+let is_admin_middleware = require('../middlewares/is_admin_middleware');
 
 
 const storage = multer.diskStorage({
@@ -25,13 +23,17 @@ const storage = multer.diskStorage({
 router.get('/', controllers.home);
 router.get('/detail/:id', controllers.product);
 router.get('/paquetes', controllers.list_of_products);
+//router.get('/my_profile', authmiddleware, controllers.profile);
+//router.get('/logout', authmiddleware, controllers.logout);
 
 router.get('/carrito', controllers.carrito);
 
-router.get('/paquetes/productsLoad', controllers.CargaEdicionProducto);
-router.post('/paquetes/productsLoad', upload.single('image'), controllers.cargarProducto);
-router.get('/paquetes/producto/productsEdit/:id', controllers.productsEdit);
-router.put('/:id', upload.single('image'), controllers.update); 
-router.delete('/:id', controllers.delete);
+
+router.get('/paquetes/productsLoad', is_admin_middleware, controllers.CargaEdicionProducto);
+router.post('/paquetes/productsLoad', is_admin_middleware, upload.single('image'), controllers.cargarProducto);
+router.get('/paquetes/producto/productsEdit/:id', is_admin_middleware, controllers.productsEdit);
+router.put('/:id', is_admin_middleware, upload.single('image'), controllers.update); 
+router.delete('/:id', is_admin_middleware, controllers.delete);
+
 
 module.exports = router;

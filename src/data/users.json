@@ -4,22 +4,15 @@
   "nombreCompleto": "Eduardo Roldan",
   "email": "eduardoroldan@gmail.com",
   "usuario": "Eduardo_Admin",
-  "password": "$2a$10$CKzH2J5.EXG12IlIuc8Go.6gXTGfJDVHZA.c36losz5ns8kutIBFm"
- },
- {
-  "id": 2,
-  "nombreCompleto": "alsmañslfm",
-  "email": "c.l.08.cl@gmail.com",
-  "usuario": "carlos",
-  "password": "$2a$10$WCIuaqZCCkP45dP6x7mSseVIu98ZAPC2Pu9sVxfwyPD0AnSBEPome",
+  "password": "$2a$10$CKzH2J5.EXG12IlIuc8Go.6gXTGfJDVHZA.c36losz5ns8kutIBFm",
   "image": "default-user.png"
  },
  {
-  "id": 3,
+  "id": 2,
   "nombreCompleto": "carlos",
   "email": "c.l.08.cl@gmail.com",
-  "usuario": "sad",
-  "password": "$2a$10$ofwRdxIJpg.TdQh77L5Wd.5U6aPFKH19R/stU34.9JY0p6iGzg5CG",
-  "image": "1637002989058_img_.jpg"
+  "usuario": "Carlos",
+  "password": "$2a$10$ndreaC/WxrT0.VZ7vJRND.beNgTpLqdiQZxrzpzS2UB4oF.jXXzQe",
+  "image": "1637009920530_img_.jpg"
  }
-]
+ ]

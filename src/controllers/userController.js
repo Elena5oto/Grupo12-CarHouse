@@ -10,8 +10,6 @@ let bcrypt= require('bcryptjs');
 
 
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const tempUsersFilePath = path.join(__dirname, '../data/tempUsers.json');
 const tempUsers = JSON.parse(fs.readFileSync(tempUsersFilePath, 'utf-8'));
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -22,11 +20,25 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
 
-//login y validacion---------------------------------------------------------------------
+     
+    login_register: (req, res) => {
+        res.render('login_register')
+    },
+
+    profile: (req, res)=>{
+        res.render('profile', {user: req.session.userlog})
+    },
+
+    logout: (req,res) =>{
+        req.session.destroy();
+        return res.redirect('/');
+    },
+
+
       
-        loginValidator: (req, res) =>{
-            let errores = validationResult(req);
-            console.log(errores);
+    loginValidator: (req, res) =>{
+        let errores = validationResult(req);
+        console.log(errores);
             if(!errores.isEmpty()){
                 return res.render('login_register',
                 {mensajesDeError: errores.mapped(),
@@ -36,11 +48,10 @@ const controller = {
 
         let userlogin = users.find(user => user.email == req.body.email)
         if(userlogin){
-          
+          let checkuser = {...userlogin};
             if(bcrypt.compareSync(req.body.password, userlogin.password)){
-                delete userlogin.password;
-                req.session.userlog = userlogin;
-                console.log(req.session.userlog);
+                checkuser.password = null;
+                req.session.userlog = checkuser;
                 return res.redirect('/')
             }
         }
@@ -51,27 +62,10 @@ const controller = {
                 }
                 }
                 })
-                
-        
-        
-        console.log(req.body.email);
-        console.log(userlogin);
-        res.send(userlogin);
-
-
-     
-
-        
-        //console.log(email)
-        //console.log(password)
-        // console.log(validationUser)
-
+ 
     },
      
-//---------------------------------------------------------------------------------------------
 
-
-//registro----------------------------------------------------
     register: (req, res) => {
         res.render('register')
     },
@@ -107,16 +101,7 @@ const controller = {
         res.redirect('/');
     },
 
-    //Elena   
-login:( req , res)=> {
-        res.render('login')
-    },
-
-
-    //prueba
-    login_register: (req, res) => {
-        res.render('login_register')
-    }
+ 
 }
 
 module.exports = controller; 

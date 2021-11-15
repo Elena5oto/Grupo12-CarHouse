@@ -14,7 +14,7 @@
                     <br>
                     <br>
                 
-                    <a  id="btn__iniciar-sesion" href="/login_register">Iniciar Sesión</a>
+                    <a  id="btn__iniciar-sesion" href="/user/login_register">Iniciar Sesión</a>
                 </div>
                 <div class="caja__trasera-register">
                     <h3>¿Aún no tienes cuenta?</h3>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="contenedor__login-register">
-                <form action="/login_register/register" method="post" class="formulario_register">
+                <form action="/user/login_register/register" method="post" class="formulario_register">
                     <h2>Registrarse</h2>
                     <input type="text" name="nombreCompleto" id="nombreCompleto" placeholder="Nombre completo" value="<%= locals.old && old.nombreCompleto ? old.nombreCompleto : ''%>" >
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>" >

@@ -6,6 +6,7 @@ const multer = require('multer');
 const { body } = require('express-validator');
 let guestmiddleware = require('../middlewares/guest_middleware');
 let authmiddleware = require('../middlewares/auth_middleware');
+let is_admin_middleware = require('../middlewares/is_admin_middleware');
 
 //validaciones
 const validacionesRegister = [
@@ -35,10 +36,11 @@ const validacionesLogin = [
  var uploadUser = multer({ storage: storageUser })
  
 router.get('/' , guestmiddleware, controllers.login_register);
+router.get('/my_profile', authmiddleware, controllers.profile);
+router.get('/logout', authmiddleware, controllers.logout);
 router.get('/login_register' , guestmiddleware, controllers.login_register);
-
-router.post('/register', guestmiddleware, uploadUser.single('image'),validacionesRegister, controllers.loadRegister);
-router.post('/login' , guestmiddleware, validacionesLogin, controllers.loginValidator);
+router.post('/login_register/register', guestmiddleware, uploadUser.single('image'),validacionesRegister, controllers.loadRegister);
+router.post('/login_register/login' , guestmiddleware, validacionesLogin, controllers.loginValidator);
 
 
 module.exports = router;
