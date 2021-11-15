@@ -5,4 +5,4 @@ function recordarmeMiddleware( req, res, next){
             req.session.userlogged
         }
 }
-module.exports = recordameMiddleware
+module.exports = recordarmeMiddleware
