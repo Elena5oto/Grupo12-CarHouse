@@ -4,7 +4,7 @@
   "nombreCompleto": "Eduardo Roldan",
   "email": "eduardoroldan@gmail.com",
   "usuario": "Eduardo_Admin",
-  "password": "admin123456"
+  "password": "$2a$10$CKzH2J5.EXG12IlIuc8Go.6gXTGfJDVHZA.c36losz5ns8kutIBFm"
  },
  {
   "id": 2,
@@ -16,10 +16,25 @@
  },
  {
   "id": 3,
+<<<<<<< HEAD
   "nombreCompleto": "carlos",
   "email": "c.l.08.cl@gmail.com",
   "usuario": "carlos",
   "password": "$2a$10$OpBOehwvyXmpw1oSR1dKiedeqxbqUAxDfLG06q9qiodZtMtUvEibi",
+=======
+  "nombreCompleto": "test1",
+  "email": "test1@gmail.com",
+  "usuario": "test1",
+  "password": "$2a$10$uCgQyky2k15f2rX.rhdyguDqr2YWf8yU2C0sQD07dOFRX66Ykep5.",
+  "image": "default-user.png"
+ },
+ {
+  "id": 4,
+  "nombreCompleto": "test1",
+  "email": "test1@gmail.com",
+  "usuario": "test11",
+  "password": "$2a$10$KBf37v3ml65CcbQtHBGYXeRaiTcqpqnZ7Y/.bH2ro5pqKa1TXNptC",
+>>>>>>> c23290d1361b8fc9c46a17e374b0ad849f567c24
   "image": "default-user.png"
  }
 ]

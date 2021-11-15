@@ -2,7 +2,12 @@ const { SSL_OP_NO_TLSv1_1 } = require('constants');
 const fs = require('fs');
 const path = require('path');
 const {validationResult} = require("express-validator");
-let bcrypt = require('bcryptjs');
+
+const { log } = require('console');
+let bcrypt= require('bcryptjs');
+
+
+
 
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -97,15 +102,51 @@ const controller = {
       
         loginValidator: (req, res) =>{
             let errores = validationResult(req);
+            console.log(errores);
             if(!errores.isEmpty()){
                 return res.render('login_register',
                 {mensajesDeError: errores.mapped(),
                 old: req.body,
                 })    
             }
+
+        let userlogin = users.find(user => user.email == req.body.email)
+        if(userlogin){
+          
+            if(bcrypt.compareSync(req.body.password, userlogin.password)){
+                delete userlogin.password;
+                req.session.userlog = userlogin;
+                console.log(req.session.userlog);
+                return res.redirect('/')
+            }
+        }
+        return res.render('login_register',{
+                    mensajesDeError: {
+                        eror: {
+                                msg: 'Las credenciales son invalidas'
+                }
+                }
+                })
+                
+        
+        
+        console.log(req.body.email);
+        console.log(userlogin);
+        res.send(userlogin);
+
+
+     
+
+        
+        //console.log(email)
+        //console.log(password)
+        // console.log(validationUser)
+
     },
      
 //---------------------------------------------------------------------------------------------
+
+
 //registro----------------------------------------------------
     register: (req, res) => {
         res.render('register')
@@ -113,6 +154,7 @@ const controller = {
     
     loadRegister: (req, res) =>{
         let errores = validationResult(req);
+        console.log(req.body)
         if(!errores.isEmpty()){
             return res.render('register_validation',
             {mensajesDeError: errores.mapped(),
@@ -126,7 +168,6 @@ const controller = {
         } else {
             image = 'default-user.png'
         }
-
         const {nombreCompleto, email, password, usuario}= req.body;
         let ids= users.map(p=>p.id)
         let newUser= {
@@ -158,9 +199,12 @@ const controller = {
     },
 
 
-    
-    
-    
+
+
+    //Elena   
+login:( req , res)=> {
+        res.render('login')
+    },
 
 
     //prueba

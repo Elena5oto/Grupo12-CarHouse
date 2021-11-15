@@ -20,11 +20,12 @@
                 </div>
             </div>
             <div class="contenedor__login-register" color= red >
-                <form action="/login" method="post" enctype="multipart/form-data" class="formulario__login">
+                <form action="/login" method="post"  class="formulario__login">
                     <h2>Iniciar Sesión</h2>
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>">
                     <input type="password" name="password" id="password" placeholder="Contraseña">
                     <button id="btn_iniciar-sesion">Iniciar Sesión</button>
+                    
                     
                 </form>
                 <form action="/register" method="post" enctype="multipart/form-data" class="formulario__register">
