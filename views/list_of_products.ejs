@@ -32,9 +32,11 @@
     
         </div>
     </div>
-    <div class="plus_div">
-        <a href="/paquetes/productsLoad"><i class="fas fa-plus"></i></a>
-    </div>
+    <% if(locals.isAdmin) {%> 
+        <div class="plus_div">
+            <a href="/paquetes/productsLoad"><i class="fas fa-plus"></i></a>
+        </div>
+    <% } %> 
     
     <script type="text/javascript" src="/js/vanilla-tilt.min.js"></script>
     <script type="text/javascript" src="/js/scroll-out.min.js"></script>

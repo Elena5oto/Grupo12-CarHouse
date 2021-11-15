@@ -49,10 +49,13 @@
                 <a class="llamada_btn" href="">Resevar una llmada</a>
                 <br>
                 <br>
-                <a class="editar_btn_detail"href="/paquetes/producto/productsEdit/<%= product.id %>">Editar</a>
+                <% if(locals.isAdmin) {%> 
+                    <a class="editar_btn_detail"href="/paquetes/producto/productsEdit/<%= product.id %>">Editar</a>
                 <form action="/paquetes/producto/<%= product.id %>?_method=DELETE" method="POST">
                     <button type="submit" class="eliminar_btn_detail">ELIMINAR</button>
-                </form>
+                </form>    
+                <% } %> 
+
             </div>
 <!--
         </div>

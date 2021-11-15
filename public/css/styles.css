@@ -788,6 +788,59 @@ ul, ol {
     border-radius: 50px
 }
 /* fin lista de productos */
+/* Inicio perfil */
+.img_and_name_profile{
+    position: relative;
+    display: flex;
+    background-color: rgb(20,20,20);
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+.img_and_name_profile img{
+
+max-width: 300px;
+max-height: 300px;
+clip-path: circle(32.8% at 50% 50%);
+}
+.img_and_name_profile h3{
+    color: white;
+    position: absolute;
+    bottom: 20px;
+}
+.info_profile{
+    display: flex;
+    flex-direction: column;
+}
+.info_profile h2{
+    text-align: center;
+    margin: 15px;
+}
+.info_profile p{
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.btn_cerrar_profile{
+    text-align: center;
+    margin: 15px;
+}
+.btn_cerrar_profile a{
+    padding: 10px 12px;
+    color: white;
+    text-align: center;
+    margin: 5px;
+    background-color: red;
+    border-radius: 39px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    }
+
+
+
+/* Fin perfil */
 .trabajos_bloks{
     display: flex;
     width: 100%;

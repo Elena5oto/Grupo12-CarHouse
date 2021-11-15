@@ -35,6 +35,13 @@ const controller = {
         console.log(products);
         res.render('list_of_products', {products : products })
     },
+    profile: (req, res)=>{
+        res.render('profile', {user: req.session.userlog})
+    },
+    logout: (req,res) =>{
+        req.session.destroy();
+        return res.redirect('/');
+    },
 
     //Carlos
     carrito: (req, res) =>{
@@ -109,14 +116,15 @@ const controller = {
                 old: req.body,
                 })    
             }
-
-        let userlogin = users.find(user => user.email == req.body.email)
+    console.log(req.body);
+        
+    let userlogin = users.find(user => user.email == req.body.email)
+        
         if(userlogin){
-          
+          let checkuser = {...userlogin};
             if(bcrypt.compareSync(req.body.password, userlogin.password)){
-                delete userlogin.password;
-                req.session.userlog = userlogin;
-                console.log(req.session.userlog);
+                checkuser.password = null;
+                req.session.userlog = checkuser;
                 return res.redirect('/')
             }
         }

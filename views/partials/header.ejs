@@ -15,7 +15,7 @@
         <% if(locals.isLogged != undefined) {%> 
 
         <% if(locals.isLogged) {%> 
-            <a href="/login_register">Mi perfil</a>
+            <a href="/my_profile">Mi perfil</a>
         <% } else{%> 
             <a href="/login_register">Iniciar Sesión</a>
         <% } %> 
@@ -30,7 +30,14 @@
     <a href="/paquetes">Servicios</a>
     <a href="">Sobre Mí</a>
     <a href="">Contacto</a>
-    <a href='/login_register'>Iniciar Sesión</a>
+    <% if(locals.isLogged != undefined) {%> 
+
+        <% if(locals.isLogged) {%> 
+            <a href="/my_profile">Mi perfil</a>
+        <% } else{%> 
+            <a href="/login_register">Iniciar Sesión</a>
+        <% } %> 
+        <% } %> 
     
 </nav>
 
