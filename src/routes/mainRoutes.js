@@ -23,8 +23,7 @@ const storage = multer.diskStorage({
 router.get('/', controllers.home);
 router.get('/detail/:id', controllers.product);
 router.get('/paquetes', controllers.list_of_products);
-//router.get('/my_profile', authmiddleware, controllers.profile);
-//router.get('/logout', authmiddleware, controllers.logout);
+
 
 router.get('/carrito', controllers.carrito);
 
