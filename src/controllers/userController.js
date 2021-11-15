@@ -54,8 +54,8 @@ const controller = {
                 req.session.userlog = checkuser;
                 return res.redirect('/')
 
-            if (req.body.recordame != undefined){
-                res.cookie('recordame',
+            if (req.body.recordarme != undefined){
+                res.cookie('recordarme',
                 userlogin.email, {maxAge: 1000*60})
             }    
             }
