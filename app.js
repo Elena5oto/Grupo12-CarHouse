@@ -10,7 +10,7 @@ const logger = require('morgan');
 const methodOverride =  require('method-override');
 let session = require('express-session');
 let userlogged_middleware = require('./src/middlewares/userlogged_middleware');
-let recordarmeMiddleware= require('/src/middlewares/recordarmeMiddleware');
+let recordarmeMiddleware = require('./src/middlewares/recordarmeMiddleware');
 
 
 app.listen(process.env.PORT || 3030,()=>console.log("servidor en linea http://localhost:3030"));
