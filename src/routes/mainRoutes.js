@@ -58,7 +58,7 @@ router.get('/carrito', controllers.carrito);
 //router.get('/register', controllers.register);
 
 router.get('/login_register' , guestmiddleware, controllers.login_register);
-router.post('/register', guestmiddleware, validacionesRegister, uploadUser.single('image'), controllers.loadRegister);
+router.post('/register', guestmiddleware, uploadUser.single('image'), validacionesRegister, controllers.loadRegister);
 router.post('/login' , guestmiddleware, validacionesLogin, controllers.loginValidator);
 
 
