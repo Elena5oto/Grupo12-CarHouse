@@ -2,6 +2,7 @@ let express = require("express");
 let app = express();
 const mainroutes = require('./src/routes/mainRoutes.js');
 const userroutes = require('./src/routes/userRoutes.js');
+const productroutes = require('./src/routes/productRoutes.js');
 const path = require("path")
 const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
@@ -32,10 +33,10 @@ app.use('/', mainroutes);
 app.use('/paquetes/producto', mainroutes)
 app.use('/paquetes', mainroutes)
 app.use('/carrito', mainroutes)
-app.use('/register', mainroutes);
+
 app.use('/paquetes/productsLoad', mainroutes);
-app.use('/login', mainroutes)
+
 app.use('/paquetes/producto/productsEdit', mainroutes);
-app.use('/login_register', mainroutes)
+app.use('/login_register', userroutes);
 
 

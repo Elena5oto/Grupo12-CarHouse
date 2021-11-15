@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="contenedor__login-register" color= red >
-                <form action="/login" method="post"  class="formulario__login">
+                <form action="/login_register/login" method="post"  class="formulario__login">
                     <h2>Iniciar Sesión</h2>
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>">
                     <input type="password" name="password" id="password" placeholder="Contraseña">
@@ -28,7 +28,7 @@
                     
                     
                 </form>
-                <form action="/register" method="post" enctype="multipart/form-data" class="formulario__register">
+                <form action="/login_register/register" method="post" enctype="multipart/form-data" class="formulario__register">
                     <h2>Registrarse</h2>
                     <input type="text" name="nombreCompleto" id="nombre_completo" placeholder="Nombre completo" value="<%= locals.old && old.nombre_completo ? old.nombre_completo : ''%>" >
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>" >

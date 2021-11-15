@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="contenedor__login-register">
-                <form action="/register" method="post" class="formulario_register">
+                <form action="/login_register/register" method="post" class="formulario_register">
                     <h2>Registrarse</h2>
                     <input type="text" name="nombreCompleto" id="nombreCompleto" placeholder="Nombre completo" value="<%= locals.old && old.nombreCompleto ? old.nombreCompleto : ''%>" >
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>" >
