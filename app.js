@@ -1,6 +1,7 @@
 let express = require("express");
 let app = express();
 const mainroutes = require('./src/routes/mainRoutes.js');
+const userroutes = require('./src/routes/userRoutes.js');
 const path = require("path")
 const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
