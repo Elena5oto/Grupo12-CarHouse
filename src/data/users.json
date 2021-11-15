@@ -13,5 +13,13 @@
   "usuario": "carlos",
   "password": "$2a$10$WCIuaqZCCkP45dP6x7mSseVIu98ZAPC2Pu9sVxfwyPD0AnSBEPome",
   "image": "default-user.png"
+ },
+ {
+  "id": 3,
+  "nombreCompleto": "carlos",
+  "email": "c.l.08.cl@gmail.com",
+  "usuario": "carlos",
+  "password": "$2a$10$OpBOehwvyXmpw1oSR1dKiedeqxbqUAxDfLG06q9qiodZtMtUvEibi",
+  "image": "default-user.png"
  }
 ]
