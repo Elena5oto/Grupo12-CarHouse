@@ -53,6 +53,11 @@ const controller = {
                 checkuser.password = null;
                 req.session.userlog = checkuser;
                 return res.redirect('/')
+
+            if (req.body.recordame != undefined){
+                res.cookie('recordame',
+                userlogin.email, {maxAge: 1000*60})
+            }    
             }
         }
         return res.render('login_register',{
