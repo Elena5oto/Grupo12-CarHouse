@@ -199,6 +199,12 @@ input#btn_enviar{
 	opacity: 0;
 }
 
+.cbox2{
+    position: absolute;
+    font-family: sans-serif;
+    color: #8a939c;
+}
+
 
 /*responsive*/
 

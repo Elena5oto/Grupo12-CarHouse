@@ -52,12 +52,13 @@ const controller = {
             if(bcrypt.compareSync(req.body.password, userlogin.password)){
                 checkuser.password = null;
                 req.session.userlog = checkuser;
-                return res.redirect('/')
+                 if (req.body.recordarme != undefined){
+                res.cookie('recordarme',
+                userlogin.email, {maxAge: 10000*60})
+            }  
+                return res.redirect('/');
 
-            if (req.body.recordame != undefined){
-                res.cookie('recordame',
-                userlogin.email, {maxAge: 1000*60})
-            }    
+             
             }
         }
         return res.render('login_register',{
