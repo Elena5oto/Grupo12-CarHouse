@@ -27,8 +27,9 @@ app.use(methodOverride('_method'));
 app.use(session({secret:'secreto',
 resave: false,
 saveUninitialized: false}));
-app.use(userlogged_middleware);
 app.use(recordarmeMiddleware);
+app.use(userlogged_middleware);
+
 
 
 app.use('/', mainroutes);

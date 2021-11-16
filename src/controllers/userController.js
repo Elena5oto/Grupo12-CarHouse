@@ -30,6 +30,7 @@ const controller = {
     },
 
     logout: (req,res) =>{
+        res.clearCookie('recordarme');
         req.session.destroy();
         return res.redirect('/');
     },
@@ -38,7 +39,7 @@ const controller = {
       
     loginValidator: (req, res) =>{
         let errores = validationResult(req);
-        console.log(errores);
+
             if(!errores.isEmpty()){
                 return res.render('login_register',
                 {mensajesDeError: errores.mapped(),
@@ -55,6 +56,7 @@ const controller = {
                  if (req.body.recordarme != undefined){
                 res.cookie('recordarme',
                 userlogin.email, {maxAge: 10000*60})
+                
             }  
                 return res.redirect('/');
 
@@ -78,7 +80,7 @@ const controller = {
     
     loadRegister: (req, res) =>{
         let errores = validationResult(req);
-        console.log(req.body)
+        
         if(!errores.isEmpty()){
             return res.render('register_validation',
             {mensajesDeError: errores.mapped(),
