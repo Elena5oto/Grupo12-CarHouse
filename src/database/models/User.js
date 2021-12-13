@@ -22,7 +22,7 @@ module.exports = (sequalize, dataTypes) => {
             allowNull: false,
         },
         password: {
-            type: dataTypes.STIRNG(60),
+            type: dataTypes.STRING,
             allowNull: false,
         },
         image: {
@@ -39,7 +39,7 @@ module.exports = (sequalize, dataTypes) => {
     const User = sequalize.define(alias, cols, config);
 
     User.associate = function(models){
-        User.belongsTo(models.Purchase, {
+        User.hasMany(models.Purchases, {
             as: "purchase",
             foreignKey: "id_user"
         })

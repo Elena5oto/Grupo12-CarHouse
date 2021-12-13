@@ -1,8 +1,10 @@
 const { SSL_OP_NO_TLSv1_1 } = require('constants');
 const fs = require('fs');
+const db = require('../database/models');
 const path = require('path');
 const {validationResult} = require("express-validator");
-
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 const { log } = require('console');
 let bcrypt= require('bcryptjs');
 
@@ -24,13 +26,24 @@ const controller = {
     }, 
     product: (req, res) =>{
         let id = req.params.id;
-        let producto = products.find(producto => producto.id == id);
-        console.log(producto);
-        res.render('productDetail', {product: producto})
+        db.Products.findOne({
+            where: {
+                id: id
+            }
+        })
+        .then(product =>{
+            res.render('productDetail', {product: product})
+        })
+        
+        
     },
     list_of_products: (req, res)=>{
-        console.log(products);
+        
+    db.Products.findAll()
+    .then(products =>{
         res.render('list_of_products', {products : products })
+    })
+        
     },
    
 
@@ -47,16 +60,23 @@ const controller = {
         } else {
             image = 'Logo_white.png'
         }
-
-        let ids= products.map(p=>p.id)
-        let newProduct= {
-            id: Math.max(...ids)+1,
-            ...req.body,
-            image: image
-        };
-       
-        products.push(newProduct)
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+        db.Products.findAll()
+        .then(products =>{
+            console.log(products);
+            let ids= products.map(p=>p.id)
+            let newProduct= {
+                id: Math.max(...ids)+1,
+                ...req.body,
+                image: image
+            }
+            console.log(newProduct);
+            db.Products.create(newProduct)
+        })
+        .catch(errors =>{
+            console.log(errors);
+        })
+        // products.push(newProduct)
+        // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
        
         res.redirect('/paquetes');
     },

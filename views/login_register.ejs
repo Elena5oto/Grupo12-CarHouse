@@ -31,9 +31,9 @@
                 </form>
                 <form action="/user/login_register/register" method="post" enctype="multipart/form-data" class="formulario__register">
                     <h2>Registrarse</h2>
-                    <input type="text" name="nombreCompleto" id="nombre_completo" placeholder="Nombre completo" value="<%= locals.old && old.nombre_completo ? old.nombre_completo : ''%>" >
+                    <input type="text" name="name" id="name" placeholder="Nombre completo" value="<%= locals.old && old.name ? old.name : ''%>" >
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>" >
-                    <input type="text" name="usuario" id="usuario" placeholder="Usuario" value="<%= locals.old && old.usuario ? old.usuario : ''%>">
+                    <input type="text" name="username" id="username" placeholder="Usuario" value="<%= locals.old && old.username ? old.username : ''%>">
                     <div id="div_file">
                         <p id="texto">Cargar Foto Perfil</p>
                             <input class="image_register" type="file" name="image" id="btn_enviar" placeholder="Imagen de Perfil">

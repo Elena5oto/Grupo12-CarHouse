@@ -10,11 +10,11 @@ let is_admin_middleware = require('../middlewares/is_admin_middleware');
 
 //validaciones
 const validacionesRegister = [
-    body("nombreCompleto").notEmpty().withMessage("Ingrese nombre completo"),
+    body("name").notEmpty().withMessage("Ingrese nombre completo"),
     body("email")
         .notEmpty().withMessage("Ingrese Email").bail()
         .isEmail().withMessage("Ingrese Email valido"),
-    body("usuario").notEmpty().withMessage("ingrese un nombre de Usuario"),
+    body("username").notEmpty().withMessage("ingrese un nombre de Usuario"),
     body("password").notEmpty().withMessage("Ingrese Contraseña"),
 ];
 

@@ -38,9 +38,9 @@ module.exports = (sequalize, dataTypes) => {
     const Product = sequalize.define(alias, cols, config);
 
     Product.associate = function(models){
-        Product.belongsTo(models.Purchase, {
+        Product.belongsTo(models.Purchases, {
             as: "purchase",
-            foreignKey: "id_product"
+            foreignKey: "id"
         })
     }
 

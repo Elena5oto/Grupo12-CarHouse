@@ -34,7 +34,7 @@ module.exports = (sequalize, dataTypes) => {
     }
 
     Purchase.associate = function(models){
-        Purchase.hasMany(models.User, {
+        Purchase.belongsTo(models.Users, {
             as: "user",
             foreignKey: "id_user"
         })
