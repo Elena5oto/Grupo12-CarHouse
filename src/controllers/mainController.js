@@ -32,6 +32,7 @@ const controller = {
             }
         })
         .then(product =>{
+            console.log(product.description); 
             res.render('productDetail', {product: product})
         })
         
