@@ -84,36 +84,47 @@ const controller = {
 //---------------------------------------------------------------------------
 //Edicion de Productos-------------------------------------------------------
     productsEdit: (req, res) => {
-        let productToEdit = products.find(product=>product.id==req.params.id)
-		res.render('productsEdit',{productToEdit,toThousand})
+        let id = req.params.id;
+        db.Products.findOne({
+            where: {
+                id: id
+            }
+        })
+        .then(productToEdit =>{
+            res.render('productsEdit',{productToEdit,toThousand})
+        })
          },
 
     update: (req, res) => { 
-        let ids= req.params.id;
-        let productToEdit = products.find(product => product.id == ids)
+        let id= req.params.id;
+        let productToEdit
         let image
-        if(req.file != undefined){
-            image = req.file.filename
-        } else{
-            image = productToEdit.image
-        }
-
-        productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-            image : image
-		};
-		
-		let newProducts = products.map(product => {
-			if (product.id == productToEdit.id) {
-				return product = {...productToEdit};
-			}
-			return product;
-		})
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.redirect('/paquetes');
+        db.Products.findOne({
+            where: {
+                id: id
+            }
+        })
+        .then(product =>{
+            console.log('hellosss');
+            console.log(product.id);
+            console.log(product.image);
+            if(req.file != undefined){
+                image = req.file.filename
+            } else{
+                image = product.image
+            }
+            productToEdit = {
+                id: product.id,
+                ...req.body,
+                image : image
+            };
+            db.Products.update(productToEdit,{
+                where: {id: id}
+            })
+            res.redirect('/paquetes');
+        })
+ 
+        
 	},
 
     

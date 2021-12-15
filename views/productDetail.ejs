@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 <%- include('./partials/head.ejs') %> 
 </head>
 <body>
@@ -10,26 +13,29 @@
     <%- include('./partials/header.ejs') %> 
 
     <main>
-        <div class="slider">
+        <div style="height: 60vh;" class="swiper">
             <h2 class="title_slider" ><%= product.title%></h2>
-            <div class="slide">
-                <img src="/images/slider15años/slider2.jpg" alt="">
-            </div>
-            <div class="slide">
-                <img src="/images/slider15años/slider3.jpg" alt="">
-            </div>
-
-            <div class="slide">
-                <img src="/images/slider15años/slider1.jpg" alt="">
-            </div>
-
-            <div class="slide">
-                <img src="/images/slider15años/slider5.jpg" alt="">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/images/slider15años/slider2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/slider15años/slider3.jpg" alt="">
+                </div>
+    
+                <div class="swiper-slide">
+                    <img src="/images/slider15años/slider1.jpg" alt="">
+                </div>
+    
+                <div class="swiper-slide">
+                    <img src="/images/slider15años/slider5.jpg" alt="">
+                </div>
+                
+                <div class="swiper-slide">
+                    <img src="/images/slider15años/slider4.jpg" alt="">
+                </div>
             </div>
             
-            <div class="slide">
-                <img src="/images/slider15años/slider4.jpg" alt="">
-            </div>
             
         </div>
         <div class="servicio_box">
@@ -75,5 +81,19 @@
         -->
         
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper", {
+            speed: 1000,
+            spaceBetween: 100,
+            loop: true,
+          effect: "fade",
+          centeredSlides: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          }
+        });
+      </script>
 </body>
 </html>
