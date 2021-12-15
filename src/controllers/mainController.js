@@ -132,14 +132,23 @@ const controller = {
         res.render('productsLoad')
     },
 
-    delete: (req, res) =>{
+   /* delete: (req, res) =>{
         let ids = req.params.id;
         let finalProduct = products.filter(products =>products.id !=ids)
         fs.writeFileSync (productsFilePath,JSON.stringify(finalProduct,null," "))
         products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.redirect ('/paquetes');
        
-    },
+    }, */
+
+     delete: function(req,res) {
+        db.Products.destroy({
+                where:{id: req.params.id}
+           })
+        res.redirect('/paquetes')
+
+        }
+
 }
 
 module.exports = controller; 
