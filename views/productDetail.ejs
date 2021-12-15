@@ -35,13 +35,13 @@
         <div class="servicio_box">
             <h2>El servicio incluye</h2>
             <div class="list_services">
-                <ul>
-                    <% for (let i in product.description) {%>
-                        <li><%=product.description[i]%></li>
-                        
-                        <% } %>  
-                </ul>
-                <h3>Valor: $<%= product.precio%></h3>
+                <p style="
+                white-space: pre-line;
+            "><%=product.description%> </p>
+                <!-- <ul>
+                   
+                </ul> -->
+                <h3>Valor: $<%= product.price%></h3>
             </div>
             <div class="btn_services">
                 <a class="contratar_btn" href="">Contratar</a>

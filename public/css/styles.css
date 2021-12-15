@@ -558,11 +558,11 @@ ul, ol {
     height: 300px;
     visibility: hidden;
     
-    clip-path: circle(0.4% at 3% 50%);
+    /* clip-path: circle(0.4% at 3% 50%);
 
-    animation: slider 20s linear infinite;
+    animation: slider 20s linear infinite; */
 }
-.slider .slide:nth-child(1){
+/* .slider .slide:nth-child(1){
     animation-delay: 0s;
 }
 .slider .slide:nth-child(2){
@@ -576,7 +576,7 @@ ul, ol {
 }
 .slider .slide:nth-child(5){
     animation-delay: 16s;
-}
+} */
 
 .slider .slide img{
     width: 100%; 
