@@ -42,6 +42,7 @@ const controller = {
 
       
     loginValidator: (req, res) =>{
+        
         let errores = validationResult(req);
 
             if(!errores.isEmpty()){
@@ -121,6 +122,8 @@ const controller = {
     },
     
     loadRegister: (req, res) =>{
+        
+        
         let errores = validationResult(req);
         
         if(!errores.isEmpty()){
@@ -132,6 +135,7 @@ const controller = {
 
         let image 
         if(req.file != undefined){
+            
             image = req.file.filename
         } else {
             image = 'default-user.png'

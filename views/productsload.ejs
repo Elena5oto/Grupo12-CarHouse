@@ -6,7 +6,7 @@
 </head>
 
 <body class="product_load_body">
-    <%- include("./partials/header2.ejs") %>
+    <%- include('./partials/header') %> 
     
     <div class="container p-4">
         <form method="post" action="/paquetes/productsLoad" enctype="multipart/form-data" class="card card-body">
@@ -38,6 +38,7 @@
             <input type="submit" value="Guardar" class="btn btn-primary">
         </form>
     </div>
+    <%- include('./partials/validaciones') %>
 
 </body>
 </html>

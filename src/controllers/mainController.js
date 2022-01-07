@@ -54,7 +54,16 @@ const controller = {
     },
 //carga de Productos nuevos------------------------------------------------------------
    cargarProducto: (req, res) => {
-        let image 
+        
+    let errores = validationResult(req);
+        
+        if(!errores.isEmpty()){
+            return res.render('productsLoad',
+            {mensajesDeError: errores.mapped(),
+             old: req.body,
+            })
+        } 
+    let image 
 
         if(req.file != undefined){
             image = req.file.filename
