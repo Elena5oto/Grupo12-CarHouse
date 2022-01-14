@@ -156,23 +156,15 @@ const controller = {
             })
         } 
 
-<<<<<<< HEAD
-        let image 
-        console.log(req.file)
-            console.log("pruebaaaaa")
-        if(req.file != undefined){
-            
-            image = req.file.filename
-        } else {
-            image = 'default-user.png'
-        }
-=======
+
+        
 
 
 
 
 
->>>>>>> 0e96c4055a5eb453bd42bee3d2cada0b3237b501
+
+
         const {name, email, username, password}= req.body;
         
         console.log(req.body);
