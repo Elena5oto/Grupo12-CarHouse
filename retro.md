@@ -1,4 +1,4 @@
-En este Sprint la retrospectiva que hicimos nos permite diluscicdar las siguientes cuestiones:
+En este Sprint la retrospectiva que hicimos nos permite diluscidar las siguientes cuestiones:
 
 1 - Comenzar a hacer: Juntarnos más.
 
