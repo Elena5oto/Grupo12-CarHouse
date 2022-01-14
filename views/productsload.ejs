@@ -6,38 +6,46 @@
 </head>
 
 <body class="product_load_body">
-    <%- include("./partials/header2.ejs") %>
+    <%- include("./partials/header.ejs") %>
     
     <div class="container p-4">
-        <form method="post" action="/paquetes/productsLoad" enctype="multipart/form-data" class="card card-body">
-            <div class="form-group">
-                <label for="name">Nombre</label>
-                <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" autofocus required autocomplete="off">
+        <form method="post" action="/paquetes/productsLoad" enctype="multipart/form-data" class="card card-body" id="form_productsload">
+            <div class="form-group" id="group_name">
+                <label for="name" class="control-label">Nombre</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" autofocus autocomplete="off">
+                <p class="text-muted" id="notification_name"></p>
             </div>
-            <div class="form-group">
-                <label for="title">Titulo</label>
-                <input type="text" class="form-control" name="title" id="title" placeholder="Titulo" autofocus required autocomplete="off">
+            <div class="form-group" id="group_title">
+                <label for="title" class="control-label">Titulo</label>
+                <input type="text" class="form-control" name="title" id="title" placeholder="Titulo" autofocus autocomplete="off">
+                <p class="text-muted" id="notification_title"></p>
             </div>
-            <div class="form-group">
-                <label for="description">Descripcion</label>
-                <textarea name="description" id="description" rows="2" class="form-control" required></textarea>
+            <div class="form-group" id="group_description">
+                <label for="description" class="control-label">Descripcion</label>
+                <textarea name="description" id="description" rows="2" class="form-control" ></textarea>
+                <p class="text-muted" id="notification_description"></p>
             </div>
-            <div class="form-group">
-
-                <label for="price">Precio</label>
-                <input type="number" class="form-control" name="price" id="price" placeholder="Precio" autofocus required autocomplete="off">
-
-
+            <div class="form-group" id="group_price">
+                <label for="price" class="control-label">Precio</label>
+                <input type="number" class="form-control" name="price" id="price" placeholder="Precio" autofocus autocomplete="off">
+                <p class="text-muted" id="notification_price"></p>
             </div>
-            <div class="form-group">
-                <label for="image">Imagenes</label>
+            <div class="form-group" id="group_image">
+                <label for="image" class="control-label">Imagenes</label>
                 <input type="file" class="form-control" name="image" id="image" placeholder="Inserte su imagen" autofocus  autocomplete="off" value="">
+                <p class="text-muted" id="notification_image"></p>
             </div>
             <br>
           
-            <input type="submit" value="Guardar" class="btn btn-primary">
+            <input type="submit" value="Guardar" class="btn btn-primary" >
+            <p class="text-danger" id="notification_general"></p>
         </form>
+        
     </div>
 
+    <script src="/js/validacion_productload.js"></script>
+
 </body>
+
+
 </html>

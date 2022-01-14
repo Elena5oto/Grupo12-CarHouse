@@ -5,6 +5,13 @@
     margin: 0;
 }
 
+/*validacion carga de producto*/
+.validacion_incorrecta input{
+    width: 100%;
+    border: 3px solid red;
+    box-shadow: 2px 2px 2px 1px red;
+}
+
 /*login nuevo-------------------------------------*/
 
 .main__login-register{

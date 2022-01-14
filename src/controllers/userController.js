@@ -131,7 +131,10 @@ const controller = {
         } 
 
         let image 
+        console.log(req.file)
+            console.log("pruebaaaaa")
         if(req.file != undefined){
+            
             image = req.file.filename
         } else {
             image = 'default-user.png'
@@ -176,3 +179,5 @@ const controller = {
 }
 
 module.exports = controller; 
+
+

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <%- include('./partials/head.ejs')%> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body class="body__login-register">
     <%- include('./partials/header') %> 
@@ -20,36 +21,46 @@
                 </div>
             </div>
             <div class="contenedor__login-register" color= red >
-                <form action="/user/login_register/login" method="post"  class="formulario__login">
+                <form action="/user/login_register/login" method="post"  class="formulario__login" id="formulario__login">
                     <h2>Iniciar Sesión</h2>
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>">
+                    <p class="text-muted" id="notification_email_login"></p>
                     <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <p class="text-muted" id="notification_password_login"></p>
                     <button id="btn_iniciar-sesion">Iniciar Sesión</button><br>
+                    <p class="text-danger" id="notification_general_login"></p>
                     <label class="cbox2"><input type="checkbox" name="recordarme" id="recordarme" value="recordarme"> Recordarme</label>
                     
                     
                 </form>
-                <form action="/user/login_register/register" method="post" enctype="multipart/form-data" class="formulario__register">
+                <form action="/user/login_register/register" method="post" enctype="multipart/form-data" class="formulario__register" id="formulario__register">
                     <h2>Registrarse</h2>
                     <input type="text" name="name" id="name" placeholder="Nombre completo" value="<%= locals.old && old.name ? old.name : ''%>" >
+                    <p class="text-muted" id="notification_name_register"></p>
                     <input type="text" name="email" id="email" placeholder="Correo Electronico" value="<%= locals.old && old.email ? old.email : ''%>" >
+                    <p class="text-muted" id="notification_email_register"></p>
                     <input type="text" name="username" id="username" placeholder="Usuario" value="<%= locals.old && old.username ? old.username : ''%>">
+                    <p class="text-muted" id="notification_username_register"></p>
                     <div id="div_file">
                         <p id="texto">Cargar Foto Perfil</p>
                             <input class="image_register" type="file" name="image" id="btn_enviar" placeholder="Imagen de Perfil">
                     </div>
+                    <p class="text-muted" id="notification_image_register"></p>
                     <input type="password" name="password" id="password" placeholder="Contraseña" >
+                    <p class="text-muted" id="notification_password_register"></p>
                     <button id="btn_registrarse" >Registrarse</button>
+                    <p class="text-danger" id="notification_general_register"></p>
                     
                 </form>
             </div>
             <br> <!--validaciones-->
-
+            
             <%- include('./partials/validaciones') %>
             
                
         </div>
     </main>
     <script src="/js/script_login_register.js"></script>
+    <script src="/js/validacion_registro.js"></script>
 </body>
 </html>
