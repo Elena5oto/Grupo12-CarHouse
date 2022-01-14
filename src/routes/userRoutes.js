@@ -31,19 +31,19 @@ const validacionesRegister = [
             })
         }),
         
-    body("image").custom((value) => {
+    // body("image").custom((value) => {
             
-            if(value != undefined){
-                if(path.extname(value) == '.jpg' || path.extname(value) == '.jpeg' || path.extname(value) == '.png' || path.extname(value) == '.gif'){
-                    console.log(path.extname(value));
-                    return true;
-                }
-            }
-            return Promise.reject('Suba una imagen'); // return "non-falsy" value to indicate valid data"
+    //         if(value != undefined){
+    //             if(path.extname(value) == '.jpg' || path.extname(value) == '.jpeg' || path.extname(value) == '.png' || path.extname(value) == '.gif'){
+    //                 console.log(path.extname(value));
+    //                 return true;
+    //             }
+    //         }
+    //         return Promise.reject('Suba una imagen'); // return "non-falsy" value to indicate valid data"
             
             
         
-    }),
+    // }),
     body("username").notEmpty().withMessage("ingrese un nombre de Usuario"),
     body("password").notEmpty().withMessage("Ingrese Contraseña")
     .isLength({ min: 8 }).withMessage("El nombre debe tener al menos 8 caracteres"),
@@ -70,7 +70,7 @@ router.get('/' , guestmiddleware, controllers.login_register);
 router.get('/my_profile', authmiddleware, controllers.profile);
 router.get('/logout', authmiddleware, controllers.logout);
 router.get('/login_register' , guestmiddleware, controllers.login_register);
-router.post('/login_register/register', guestmiddleware, uploadUser.single('image'),validacionesRegister, controllers.loadRegister);
+router.post('/login_register/register', guestmiddleware, uploadUser.single('image'), validacionesRegister, controllers.loadRegister);
 router.post('/login_register/login' , guestmiddleware, validacionesLogin, controllers.loginValidator);
 
 

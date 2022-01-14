@@ -126,6 +126,29 @@ const controller = {
         
         let errores = validationResult(req);
         
+        
+        
+        let image = null; 
+        
+        if (req.file != undefined){
+        
+            let extension = req.file.mimetype 
+            if(extension == 'image/jpeg' || extension == 'image/jpg' || extension == 'image/png' || extension == 'image/gif'){
+                
+                image = req.file.filename;
+            }
+            else{
+                
+                 errores.errors.push({
+                     msg:'Suba una imagen de tipo : .jpg, .png, jpeg o .gif'
+                 })
+                 
+            }
+            
+        } else {
+            image = 'default-user.png'
+        }
+
         if(!errores.isEmpty()){
             return res.render('register_validation',
             {mensajesDeError: errores.mapped(),
@@ -133,17 +156,15 @@ const controller = {
             })
         } 
 
-        let image 
-        if(req.file != undefined){
-            
-            image = req.file.filename
-        } else {
-            image = 'default-user.png'
-        }
+
+
+
+
+
         const {name, email, username, password}= req.body;
-        console.log('body');
+        
         console.log(req.body);
-        console.log('body');
+        
         db.Users.findAll()
         .then(users =>{
             console.log(users);
