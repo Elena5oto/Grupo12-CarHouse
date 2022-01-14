@@ -485,7 +485,7 @@ input#btn_enviar{
 }
 .page_logo{
     width: 95%;
-    z-index: 100;
+    
     height: 65%;
 }
 .main-header{
@@ -539,12 +539,12 @@ ul, ol {
     
 }
 
-.swiper{
+.my_banner{
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 300px;
+    height: 70vh;
 }
 
  .title_slider{
@@ -562,17 +562,65 @@ ul, ol {
     top: 0;
     left: 0;
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
     /* visibility: hidden; */
 }
 
+.swiper-slide .img_testimonio{
+    width: 100px;
+    height: 100px;
+    margin: 5px auto;
+    padding: 5px;
+    border: 3px solid white ;
+    border-radius: 50%;
+}
 
  .swiper-slide img{
     width: 100%; 
-    height: 300px;
+    height: 70vh;
     display: block;
     object-fit: cover;
 }
+.mySwiper{
+    height: 100%;
+    background-color: rgb(30, 30, 30);
+}
+
+.quote-left{
+    color: white;
+    text-align: initial;
+    margin-top: 15px;
+    margin-left:15px;
+}
+.title_testimonio{
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.testimonial_text{
+    display: block;
+    color: white;
+    white-space: pre-line;
+    text-justify:inter-ideograph;
+    /* padding: 10px; */
+    margin: auto;
+    font-size: 20px;
+    text-align: justify;
+    /* width: 70%; */
+}
+.quote-right{
+    color: white;
+    text-align: end;
+    margin-bottom: 15px;
+    margin-right:15px;
+}
+
+
+
+
+
 .servicio_box{
     display: flex;
     flex-direction: column;
@@ -825,16 +873,24 @@ clip-path: circle(32.8% at 50% 50%);
 
 
 /* Fin perfil */
-.trabajos_bloks{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+.trabajos_container{
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.trabajos_preview{
+.trabajos_bloks{
+    display: grid;
     width: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+}
+.trabajos_preview img[data-src]{
+    filter: blur(0.2em);
 }
 .trabajos_preview img{
+    filter: blur(0em);
+    transition: filter 0.5s;
     width: 100%;
+    height: 100%;
 }
 .testimonios_main{
     display: flex;
@@ -976,12 +1032,27 @@ clip-path: circle(32.8% at 50% 50%);
 
 /* Medias query */
     @media screen and (min-width: 1200px){
-        .swiper{
+        .swiper-slide .img_testimonio{
+            width: 150px;
+            height: 150px;
+            margin: 5px auto;
+            padding: 5px;
+            border: 3px solid white ;
+            border-radius: 50%;
+        }
+        .mySwiper{
+            height: 105%;
+            
+        }
+        .trabajos_bloks{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .my_banner{
             position: relative;
             top: 0;
             left: 0;
             width: 100%;
-            height: 75vh;
+            height: 80vh;
         }
         
         .slider .title_slider{
@@ -999,7 +1070,8 @@ clip-path: circle(32.8% at 50% 50%);
             top: 0;
             left: 0;
             width: 100%;
-            height: 75vh;
+            
+            text-align: center;
             /* visibility: hidden; */
         }
         

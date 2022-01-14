@@ -6,7 +6,11 @@
 </head>
 
 <body class="product_load_body">
+<<<<<<< HEAD
     <%- include("./partials/header.ejs") %>
+=======
+    <%- include('./partials/header') %> 
+>>>>>>> 0e96c4055a5eb453bd42bee3d2cada0b3237b501
     
     <div class="container p-4">
         <form method="post" action="/paquetes/productsLoad" enctype="multipart/form-data" class="card card-body" id="form_productsload">
@@ -42,6 +46,7 @@
         </form>
         
     </div>
+    <%- include('./partials/validaciones') %>
 
     <script src="/js/validacion_productload.js"></script>
 
