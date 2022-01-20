@@ -2,6 +2,7 @@ const db = require('../database/models');
 const path = require('path');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const op = db.Sequelize.Op
 
 const controller = {
 
@@ -34,13 +35,35 @@ Detail_product: (req, res)=>{
 
 
 
-}
+},
 
 
 
 
 
 // Users
+ Users: (req, res) => {
+     db.Users
+        .findAll()
+        .then(users =>{
+            return res.status(200).json({
+                total: users.length,
+                data: users,
+                status: 200
+            })
+        })
+ },
+
+ Detail_users: (req, res) => {
+    db.Users
+       .findByPk(req.params.id)
+       .then(user =>{
+           return res.status(200).json({
+               data: user,
+               status: 200
+           })
+       })
+},
 
 
 

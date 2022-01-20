@@ -7,8 +7,8 @@ const controllers = require('../controllers/apiController.js')
 
 
 // Users Api
-router.get('/users', controllers.Products);
-router.get('/users/:id', controllers.Products);
+router.get('/users', controllers.Users);
+router.get('/users/:id', controllers.Detail_users);
 // Product Api
 router.get('/products', controllers.Products);
 router.get('/products/:id', controllers.Detail_product);
