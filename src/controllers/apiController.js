@@ -7,7 +7,7 @@ const controller = {
 
 // Products
 Products: (req, res) =>{
-    let final;
+  
     db.Products.findAll()
     .then(results =>{
         results.map(result =>{
@@ -17,6 +17,22 @@ Products: (req, res) =>{
         count: results.length,
         products: results})
     })
+
+},
+Detail_product: (req, res)=>{
+    let id = req.params.id;
+    
+    db.Products.findByPk(id)
+    .then(results =>{
+        
+        results.dataValues.Url_image = '/images/products/' + results.dataValues.image
+        
+        return res.json({product: results})
+    })
+ 
+    
+
+
 
 }
 

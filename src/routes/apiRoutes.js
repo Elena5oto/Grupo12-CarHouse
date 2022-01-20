@@ -11,7 +11,7 @@ router.get('/users', controllers.Products);
 router.get('/users/:id', controllers.Products);
 // Product Api
 router.get('/products', controllers.Products);
-router.get('/products/:id', controllers.Products);
+router.get('/products/:id', controllers.Detail_product);
 
 
 
