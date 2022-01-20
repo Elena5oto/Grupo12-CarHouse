@@ -46,7 +46,9 @@ const controller = {
     })
         
     },
-   
+    about_me: (req, res) =>{
+        res.render('about_me')
+    },
 
     //Carlos
     carrito: (req, res) =>{

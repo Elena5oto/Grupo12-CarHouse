@@ -155,16 +155,7 @@ const controller = {
              old: req.body,
             })
         } 
-
-
         
-
-
-
-
-
-
-
         const {name, email, username, password}= req.body;
         
         console.log(req.body);

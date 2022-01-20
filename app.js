@@ -3,6 +3,7 @@ let app = express();
 const mainroutes = require('./src/routes/mainRoutes.js');
 const userroutes = require('./src/routes/userRoutes.js');
 const productroutes = require('./src/routes/productRoutes.js');
+const apiroutes = require('./src/routes/apiRoutes.js')
 const path = require("path")
 const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
@@ -41,6 +42,7 @@ app.use('/paquetes/productsLoad', mainroutes);
 
 app.use('/paquetes/producto/productsEdit', mainroutes);
 app.use('/user', userroutes);
+app.use('/api', apiroutes)
 
 
 

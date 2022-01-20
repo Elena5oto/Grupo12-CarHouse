@@ -617,9 +617,52 @@ ul, ol {
     margin-right:15px;
 }
 
+/* about me */
+.first_div_about{
+    background-color: white;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+.title_about{
+    position: absolute;
+    width: 100%;
+    color: red;
+    text-align: center;
+    bottom: 85%;
+   
+}
+.img_div_about{
+    
+    width: 100%; 
+    position: relative;
+    /* margin: 0 auto; */
+    display: flex;
+    max-height: 700px;
+    bottom: -50%;
+    width: 100%;
+    max-width: 700px;
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    /* align-content: center; */
+    align-items: center;
+  
+}
+.img_perfil_about{
+    padding: 20px;
+    width: 100%;
+    max-height: 700px;
+}
+.second_div_about{
+    background-color: rgb(20, 20, 20);;
+    height: 50vh;
+}
 
 
 
+/* End about me */
 
 .servicio_box{
     display: flex;
