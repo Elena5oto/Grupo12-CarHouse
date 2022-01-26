@@ -19,6 +19,26 @@
     width: 120%;
 }
 
+.product_load_body{
+    background-image: url(../images/back_productLoad.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+ #form_productsload{
+    
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+    background-color: rgba(98, 109, 119, 0.3);
+ }
+
+
 /*login nuevo-------------------------------------*/
 
 .main__login-register{
