@@ -50,6 +50,7 @@ router.get('/', controllers.home);
 router.get('/detail/:id', controllers.product);
 router.get('/paquetes', controllers.list_of_products);
 router.get('/about_me', controllers.about_me)
+router.get('/contacts', controllers.contacts)
 
 router.get('/carrito', controllers.carrito);
 

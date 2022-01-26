@@ -49,6 +49,9 @@ const controller = {
     about_me: (req, res) =>{
         res.render('about_me')
     },
+    contacts: (req, res) =>{
+        res.render('contacts')
+    },
 
     //Carlos
     carrito: (req, res) =>{
