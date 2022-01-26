@@ -12,6 +12,13 @@
     box-shadow: 2px 2px 2px 1px red;
 }
 
+
+.btn-danger{
+    background-color: red;
+    color: white;
+    width: 120%;
+}
+
 /*login nuevo-------------------------------------*/
 
 .main__login-register{

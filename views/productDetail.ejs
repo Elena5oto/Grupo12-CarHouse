@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          rel="stylesheet" />
     <link
     rel="stylesheet"
     href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -58,7 +60,7 @@
                 <% if(locals.isAdmin) {%> 
                     <a class="editar_btn_detail"href="/paquetes/producto/productsEdit/<%= product.id %>">Editar</a>
                 <form action="/paquetes/producto/<%= product.id %>?_method=DELETE" method="POST">
-                    <button type="submit" class="eliminar_btn_detail">ELIMINAR</button>
+                    <button type="submit" class="btn btn-danger" href="">ELIMINAR</i></button>
                 </form>    
                 <% } %> 
 

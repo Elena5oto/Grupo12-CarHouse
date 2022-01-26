@@ -19,6 +19,8 @@ const campos ={
     image: true,
 }
 
+
+
 const validarFormulario = (e) => {
     switch (e.target.name) {
         case "name":
@@ -157,8 +159,9 @@ textareas.forEach((textarea) => {
 
 formulario.addEventListener('submit', (e) => {
     if (campos.name && campos.title && campos.description && campos.price && campos.image) {
-
+        console.log(campos)
     } else{
+        console.log(campos)
 e.preventDefault()
 document.getElementById('notification_general').innerHTML = "Complete todos los campos obligatorios"
 }

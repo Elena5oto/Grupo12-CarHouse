@@ -90,7 +90,7 @@ const controller = {
         // products.push(newProduct)
         // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
        
-        res.redirect('/paquetes');
+        res.redirect('/');
     },
 //---------------------------------------------------------------------------
 //Edicion de Productos-------------------------------------------------------
@@ -132,7 +132,7 @@ const controller = {
             db.Products.update(productToEdit,{
                 where: {id: id}
             })
-            res.redirect('/paquetes');
+            res.redirect('/');
         })
  
         
@@ -156,7 +156,7 @@ const controller = {
         db.Products.destroy({
                 where:{id: req.params.id}
            })
-        res.redirect('/paquetes')
+        res.redirect('/')
 
         }
 
